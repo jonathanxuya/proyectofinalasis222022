@@ -1,0 +1,30 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32802.440
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BusquedaInteligente", "BusquedaInteligente\BusquedaInteligente.csproj", "{FB1BEFA9-745C-4C12-A569-20C04EDBEB6A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{AD5C3298-8D2E-4AF2-97D8-114A42DDC0F9}"
+	ProjectSection(SolutionItems) = preProject
+		CapaModelo.cs = CapaModelo.cs
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FB1BEFA9-745C-4C12-A569-20C04EDBEB6A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FB1BEFA9-745C-4C12-A569-20C04EDBEB6A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FB1BEFA9-745C-4C12-A569-20C04EDBEB6A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FB1BEFA9-745C-4C12-A569-20C04EDBEB6A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9B6C6473-BF20-4544-A9F9-85A57695BA5F}
+	EndGlobalSection
+EndGlobal
