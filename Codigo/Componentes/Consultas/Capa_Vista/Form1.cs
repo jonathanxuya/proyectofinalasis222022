@@ -174,6 +174,7 @@ namespace BusquedaInteligente
             cn.ejecutarconsulta(textConsultaBusqueda.Text);
             MessageBox.Show("Las consultas con nombre " + textConsultaBusqueda.Text + " Han sido eliminadas");
             actualizaconsultas();
+
             textConsultaBusqueda.Text = "";
         }
 
