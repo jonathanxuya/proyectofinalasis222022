@@ -9,5 +9,9 @@ namespace Capa_Modelo
 {
     class Sentencias
     {
+
+        Class1 con = new Class1();
+
     }
+
 }

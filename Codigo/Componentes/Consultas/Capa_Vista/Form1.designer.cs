@@ -154,7 +154,7 @@ namespace BusquedaInteligente
             this.iconButton25 = new FontAwesome.Sharp.IconButton();
             this.label32 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.textBox13 = new System.Windows.Forms.TextBox();
+            this.textConsultaBusqueda = new System.Windows.Forms.TextBox();
             this.panel12.SuspendLayout();
             this.panel13.SuspendLayout();
             this.panel14.SuspendLayout();
@@ -1454,7 +1454,7 @@ namespace BusquedaInteligente
             this.panel20.Controls.Add(this.iconButton25);
             this.panel20.Controls.Add(this.label32);
             this.panel20.Controls.Add(this.dataGridView1);
-            this.panel20.Controls.Add(this.textBox13);
+            this.panel20.Controls.Add(this.textConsultaBusqueda);
             this.panel20.Location = new System.Drawing.Point(23, 7);
             this.panel20.Name = "panel20";
             this.panel20.Size = new System.Drawing.Size(954, 379);
@@ -1473,6 +1473,7 @@ namespace BusquedaInteligente
             this.iconButton12.Text = "Elimiar";
             this.iconButton12.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.iconButton12.UseVisualStyleBackColor = true;
+            this.iconButton12.Click += new System.EventHandler(this.iconButton12_Click);
             // 
             // iconButton28
             // 
@@ -1487,6 +1488,7 @@ namespace BusquedaInteligente
             this.iconButton28.Text = "Consultas";
             this.iconButton28.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.iconButton28.UseVisualStyleBackColor = true;
+            this.iconButton28.Click += new System.EventHandler(this.iconButton28_Click);
             // 
             // iconButton26
             // 
@@ -1502,6 +1504,7 @@ namespace BusquedaInteligente
             this.iconButton26.Text = "Update";
             this.iconButton26.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.iconButton26.UseVisualStyleBackColor = true;
+            this.iconButton26.Click += new System.EventHandler(this.iconButton26_Click);
             // 
             // iconButton25
             // 
@@ -1536,12 +1539,12 @@ namespace BusquedaInteligente
             this.dataGridView1.TabIndex = 10;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
-            // textBox13
+            // textConsultaBusqueda
             // 
-            this.textBox13.Location = new System.Drawing.Point(166, 35);
-            this.textBox13.Name = "textBox13";
-            this.textBox13.Size = new System.Drawing.Size(300, 20);
-            this.textBox13.TabIndex = 9;
+            this.textConsultaBusqueda.Location = new System.Drawing.Point(166, 35);
+            this.textConsultaBusqueda.Name = "textConsultaBusqueda";
+            this.textConsultaBusqueda.Size = new System.Drawing.Size(300, 20);
+            this.textConsultaBusqueda.TabIndex = 9;
             // 
             // Form1
             // 
@@ -1645,7 +1648,7 @@ namespace BusquedaInteligente
         private System.Windows.Forms.Panel panel20;
         private System.Windows.Forms.Label label32;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.TextBox textBox13;
+        private System.Windows.Forms.TextBox textConsultaBusqueda;
         private FontAwesome.Sharp.IconButton btnEliminar;
         private FontAwesome.Sharp.IconButton iconButton6;
         private FontAwesome.Sharp.IconButton iconButton10;

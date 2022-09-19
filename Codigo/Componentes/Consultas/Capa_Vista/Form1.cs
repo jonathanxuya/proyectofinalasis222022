@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Capa_Controlador;
 using System.Data.Odbc;
 
 namespace BusquedaInteligente
@@ -17,7 +18,7 @@ namespace BusquedaInteligente
         {
             InitializeComponent();
         }
-
+       
 
         /*private void button1_Click(object sender, EventArgs e)
          {
@@ -157,6 +158,32 @@ namespace BusquedaInteligente
         private void iconButton2_Click(object sender, EventArgs e)
         {
 
+        }
+
+        //se necesita actualizaciones para terminar boton eliminar
+        //Diana Victores 9959-19-1471
+        public void actualizaconsultas()
+        {
+          
+        }
+
+        //boton eliminar de la forma Buscar/Eliminar - Diana Victores 9959-19-1471
+        private void iconButton12_Click(object sender, EventArgs e)
+        {
+            cn.ejecutarconsulta(textConsultaBusqueda.Text);
+            MessageBox.Show("Las consultas con nombre " + textConsultaBusqueda.Text + " Han sido eliminadas");
+            actualizaconsultas();
+            textConsultaBusqueda.Text = "";
+        }
+
+        private void iconButton26_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void iconButton28_Click(object sender, EventArgs e)
+        {
+            actualizaconsultas();
         }
     }
     }
