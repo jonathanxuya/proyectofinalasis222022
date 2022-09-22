@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.Odbc;
-using Capa_Controlador;
+
 using Capa_Modelo;
 
 namespace Capa_Vista
@@ -21,7 +21,8 @@ namespace Capa_Vista
         }
 
 
-        Capa_Controlador.CRUD crud = new Capa_Controlador.CRUD();
+        Capa_Modelo.CRUD crud = new Capa_Modelo.CRUD();
+
 
         private void btnNuevo_Click(object sender, EventArgs e)
         {
@@ -37,7 +38,7 @@ namespace Capa_Vista
         private void iconButton7_Click(object sender, EventArgs e)
         {
             textBox12.Clear();
-            
+
             textBox11.Clear();
 
 
@@ -56,7 +57,7 @@ namespace Capa_Vista
         private void iconButton8_Click(object sender, EventArgs e)
         {
             textBox16.Clear();
-            
+
             textBox10.Clear();
 
         }
@@ -73,7 +74,7 @@ namespace Capa_Vista
 
         private void iconButton9_Click(object sender, EventArgs e)
         {
-            
+
             textBox9.Clear();
         }
 
@@ -89,18 +90,18 @@ namespace Capa_Vista
 
         private void iconButton10_Click(object sender, EventArgs e)
         {
-          
+
             textBox8.Clear();
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            
-            textBox8.Clear();            
+
+            textBox8.Clear();
             textBox9.Clear();
-            textBox16.Clear();            
+            textBox16.Clear();
             textBox10.Clear();
-            textBox12.Clear();            
+            textBox12.Clear();
             textBox11.Clear();
 
         }
@@ -122,8 +123,8 @@ namespace Capa_Vista
                     if (dataGridView1.Columns[e.ColumnIndex].Name == "ColumnDgvElimnar")
                     {
                         //string ope = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
-                       // bool resultado = crud.EliminarBusqueda(ope);
-                       // if (resultado)
+                        // bool resultado = crud.EliminarBusqueda(ope);
+                        // if (resultado)
                         {
                             dataGridView1.Rows.RemoveAt(e.RowIndex);
                         }
@@ -174,7 +175,4 @@ namespace Capa_Vista
 
         }
     }
-    }
-
-
-
+}
