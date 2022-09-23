@@ -7,7 +7,10 @@ using System.Data.Odbc;
 
 namespace Capa_Modelo
 {
-    class Sentencias
+    public class clsSentencias
     {
+        Class1 con = new Class1();
     }
+
+
 }

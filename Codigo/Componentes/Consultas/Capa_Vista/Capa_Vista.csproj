@@ -59,11 +59,19 @@
     <Compile Include="Busqueda Avanzada.Designer.cs">
       <DependentUpon>Busqueda Avanzada.cs</DependentUpon>
     </Compile>
+<<<<<<< HEAD
+    <Compile Include="Consulta Inteligente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consulta Inteligente.designer.cs">
+      <DependentUpon>Consulta Inteligente.cs</DependentUpon>
+=======
     <Compile Include="Consultas Inteligente.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Consultas Inteligente.designer.cs">
       <DependentUpon>Consultas Inteligente.cs</DependentUpon>
+>>>>>>> 2064caf593dbefa07afb973ca6f95264929cfaeb
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -74,8 +82,13 @@
     <EmbeddedResource Include="Busqueda Avanzada.resx">
       <DependentUpon>Busqueda Avanzada.cs</DependentUpon>
     </EmbeddedResource>
+<<<<<<< HEAD
+    <EmbeddedResource Include="Consulta Inteligente.resx">
+      <DependentUpon>Consulta Inteligente.cs</DependentUpon>
+=======
     <EmbeddedResource Include="Consultas Inteligente.resx">
       <DependentUpon>Consultas Inteligente.cs</DependentUpon>
+>>>>>>> 2064caf593dbefa07afb973ca6f95264929cfaeb
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
