@@ -97,12 +97,13 @@ namespace BusquedaInteligente
             this.txtCadenaGeneradaEDITAR = new System.Windows.Forms.TextBox();
             this.label33 = new System.Windows.Forms.Label();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.groupBox7 = new System.Windows.Forms.GroupBox();
+            this.rdbdescEDITAR = new System.Windows.Forms.RadioButton();
+            this.rdbAscEDITAR = new System.Windows.Forms.RadioButton();
             this.cboAgruparEDITAR = new System.Windows.Forms.ComboBox();
             this.cboCampoAgruparEDITAR = new System.Windows.Forms.ComboBox();
             this.btnCancelarAgruparOrdenarEDITAR = new FontAwesome.Sharp.IconButton();
             this.btnAgregarAgruparOrdenarEDITAR = new FontAwesome.Sharp.IconButton();
-            this.rdbdescEDITAR = new System.Windows.Forms.RadioButton();
-            this.rdbAscEDITAR = new System.Windows.Forms.RadioButton();
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
@@ -160,7 +161,6 @@ namespace BusquedaInteligente
             this.label32 = new System.Windows.Forms.Label();
             this.dgvBUSCARyELIMINAR = new System.Windows.Forms.DataGridView();
             this.txtNombreConsultaBUSCARyELIMINAR = new System.Windows.Forms.TextBox();
-            this.groupBox7 = new System.Windows.Forms.GroupBox();
             this.panel12.SuspendLayout();
             this.panel13.SuspendLayout();
             this.panel14.SuspendLayout();
@@ -177,6 +177,7 @@ namespace BusquedaInteligente
             this.tbpEditar.SuspendLayout();
             this.panel1.SuspendLayout();
             this.groupBox6.SuspendLayout();
+            this.groupBox7.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox5.SuspendLayout();
             this.groupBox4.SuspendLayout();
@@ -184,7 +185,6 @@ namespace BusquedaInteligente
             this.tbpBE.SuspendLayout();
             this.panel20.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBUSCARyELIMINAR)).BeginInit();
-            this.groupBox7.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel12
@@ -920,7 +920,42 @@ namespace BusquedaInteligente
             this.groupBox6.Size = new System.Drawing.Size(592, 107);
             this.groupBox6.TabIndex = 34;
             this.groupBox6.TabStop = false;
-            this.groupBox6.Text = "groupBox6";
+            this.groupBox6.Text = "Agrupar/Ordenar";
+            // 
+            // groupBox7
+            // 
+            this.groupBox7.Controls.Add(this.rdbdescEDITAR);
+            this.groupBox7.Controls.Add(this.rdbAscEDITAR);
+            this.groupBox7.Location = new System.Drawing.Point(200, 19);
+            this.groupBox7.Name = "groupBox7";
+            this.groupBox7.Size = new System.Drawing.Size(200, 63);
+            this.groupBox7.TabIndex = 40;
+            this.groupBox7.TabStop = false;
+            this.groupBox7.Text = "Tipo_Ordenamiento";
+            // 
+            // rdbdescEDITAR
+            // 
+            this.rdbdescEDITAR.AutoSize = true;
+            this.rdbdescEDITAR.BackColor = System.Drawing.Color.Transparent;
+            this.rdbdescEDITAR.Location = new System.Drawing.Point(21, 36);
+            this.rdbdescEDITAR.Name = "rdbdescEDITAR";
+            this.rdbdescEDITAR.Size = new System.Drawing.Size(50, 17);
+            this.rdbdescEDITAR.TabIndex = 3;
+            this.rdbdescEDITAR.TabStop = true;
+            this.rdbdescEDITAR.Text = "Desc";
+            this.rdbdescEDITAR.UseVisualStyleBackColor = false;
+            // 
+            // rdbAscEDITAR
+            // 
+            this.rdbAscEDITAR.AutoSize = true;
+            this.rdbAscEDITAR.BackColor = System.Drawing.Color.Transparent;
+            this.rdbAscEDITAR.Location = new System.Drawing.Point(136, 36);
+            this.rdbAscEDITAR.Name = "rdbAscEDITAR";
+            this.rdbAscEDITAR.Size = new System.Drawing.Size(43, 17);
+            this.rdbAscEDITAR.TabIndex = 2;
+            this.rdbAscEDITAR.TabStop = true;
+            this.rdbAscEDITAR.Text = "Asc";
+            this.rdbAscEDITAR.UseVisualStyleBackColor = false;
             // 
             // cboAgruparEDITAR
             // 
@@ -975,30 +1010,6 @@ namespace BusquedaInteligente
             this.btnAgregarAgruparOrdenarEDITAR.UseVisualStyleBackColor = true;
             this.btnAgregarAgruparOrdenarEDITAR.Click += new System.EventHandler(this.btnAgregarAgruparOrdenarEDITAR_Click);
             // 
-            // rdbdescEDITAR
-            // 
-            this.rdbdescEDITAR.AutoSize = true;
-            this.rdbdescEDITAR.BackColor = System.Drawing.Color.Transparent;
-            this.rdbdescEDITAR.Location = new System.Drawing.Point(21, 36);
-            this.rdbdescEDITAR.Name = "rdbdescEDITAR";
-            this.rdbdescEDITAR.Size = new System.Drawing.Size(50, 17);
-            this.rdbdescEDITAR.TabIndex = 3;
-            this.rdbdescEDITAR.TabStop = true;
-            this.rdbdescEDITAR.Text = "Desc";
-            this.rdbdescEDITAR.UseVisualStyleBackColor = false;
-            // 
-            // rdbAscEDITAR
-            // 
-            this.rdbAscEDITAR.AutoSize = true;
-            this.rdbAscEDITAR.BackColor = System.Drawing.Color.Transparent;
-            this.rdbAscEDITAR.Location = new System.Drawing.Point(136, 36);
-            this.rdbAscEDITAR.Name = "rdbAscEDITAR";
-            this.rdbAscEDITAR.Size = new System.Drawing.Size(43, 17);
-            this.rdbAscEDITAR.TabIndex = 2;
-            this.rdbAscEDITAR.TabStop = true;
-            this.rdbAscEDITAR.Text = "Asc";
-            this.rdbAscEDITAR.UseVisualStyleBackColor = false;
-            // 
             // label13
             // 
             this.label13.AutoSize = true;
@@ -1027,7 +1038,7 @@ namespace BusquedaInteligente
             this.groupBox3.Size = new System.Drawing.Size(912, 223);
             this.groupBox3.TabIndex = 33;
             this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "groupBox3";
+            this.groupBox3.Text = "Cndiciones_ConsultaCompleja";
             // 
             // chkcondicioneseditar
             // 
@@ -1057,7 +1068,7 @@ namespace BusquedaInteligente
             this.groupBox5.Size = new System.Drawing.Size(388, 150);
             this.groupBox5.TabIndex = 6;
             this.groupBox5.TabStop = false;
-            this.groupBox5.Text = "groupBox5";
+            this.groupBox5.Text = "Comparacion";
             // 
             // cbocompwhere
             // 
@@ -1185,7 +1196,7 @@ namespace BusquedaInteligente
             this.groupBox4.Size = new System.Drawing.Size(485, 150);
             this.groupBox4.TabIndex = 5;
             this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "groupBox4";
+            this.groupBox4.Text = "Logica";
             // 
             // cbocompand
             // 
@@ -1320,7 +1331,7 @@ namespace BusquedaInteligente
             this.groupBox2.Size = new System.Drawing.Size(764, 238);
             this.groupBox2.TabIndex = 32;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "groupBox2";
+            this.groupBox2.Text = "General/Consulta Simple";
             // 
             // txtcamposelectoseditar
             // 
@@ -1651,7 +1662,6 @@ namespace BusquedaInteligente
             this.dgvBUSCARyELIMINAR.RowHeadersWidth = 51;
             this.dgvBUSCARyELIMINAR.Size = new System.Drawing.Size(756, 238);
             this.dgvBUSCARyELIMINAR.TabIndex = 10;
-            this.dgvBUSCARyELIMINAR.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // txtNombreConsultaBUSCARyELIMINAR
             // 
@@ -1659,17 +1669,6 @@ namespace BusquedaInteligente
             this.txtNombreConsultaBUSCARyELIMINAR.Name = "txtNombreConsultaBUSCARyELIMINAR";
             this.txtNombreConsultaBUSCARyELIMINAR.Size = new System.Drawing.Size(300, 20);
             this.txtNombreConsultaBUSCARyELIMINAR.TabIndex = 9;
-            // 
-            // groupBox7
-            // 
-            this.groupBox7.Controls.Add(this.rdbdescEDITAR);
-            this.groupBox7.Controls.Add(this.rdbAscEDITAR);
-            this.groupBox7.Location = new System.Drawing.Point(200, 19);
-            this.groupBox7.Name = "groupBox7";
-            this.groupBox7.Size = new System.Drawing.Size(200, 63);
-            this.groupBox7.TabIndex = 40;
-            this.groupBox7.TabStop = false;
-            this.groupBox7.Text = "groupBox7";
             // 
             // Busqueda
             // 
@@ -1707,6 +1706,8 @@ namespace BusquedaInteligente
             this.panel1.PerformLayout();
             this.groupBox6.ResumeLayout(false);
             this.groupBox6.PerformLayout();
+            this.groupBox7.ResumeLayout(false);
+            this.groupBox7.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             this.groupBox5.ResumeLayout(false);
@@ -1719,8 +1720,6 @@ namespace BusquedaInteligente
             this.panel20.ResumeLayout(false);
             this.panel20.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBUSCARyELIMINAR)).EndInit();
-            this.groupBox7.ResumeLayout(false);
-            this.groupBox7.PerformLayout();
             this.ResumeLayout(false);
 
         }

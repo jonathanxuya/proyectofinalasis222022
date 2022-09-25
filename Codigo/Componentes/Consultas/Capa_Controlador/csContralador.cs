@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Capa_ModeloConsultas;
 using System.Data.Odbc;
+using System.Data;
 
 namespace Capa_ControladorConsultas
 {

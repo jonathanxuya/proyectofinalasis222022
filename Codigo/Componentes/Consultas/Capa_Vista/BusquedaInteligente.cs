@@ -14,7 +14,10 @@ namespace BusquedaInteligente
 {
     public partial class Busqueda : Form
     {
-        OdbcConnection cn = new OdbcConnection("DSN = Colchoneria");
+
+        clscontrolador cn = new clscontrolador();
+                    
+        
         string campo = "";
         string csimple = "";
         string where = "";
