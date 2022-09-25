@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Capa_Controlador
+namespace Capa_ControladorConsultas
 {
     public class Class1
     {
