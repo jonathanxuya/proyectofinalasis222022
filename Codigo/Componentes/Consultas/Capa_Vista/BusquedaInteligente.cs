@@ -129,37 +129,7 @@ namespace BusquedaInteligente
 
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            try
-            {
-                if (e.RowIndex != -1)
-                {
-                    if (dgvBUSCARyELIMINAR.Columns[e.ColumnIndex].Name == "ColumnDgvModificar")
-                    {
-                        textBox1.Text = dgvBUSCARyELIMINAR.Rows[e.RowIndex].Cells[0].Value.ToString();
-                        txtNombreRepresentativoEDITAR.Text = dgvBUSCARyELIMINAR.Rows[e.RowIndex].Cells[1].Value.ToString();
-                        txtNombreConsultaBUSCARyELIMINAR.Text = dgvBUSCARyELIMINAR.Rows[e.RowIndex].Cells[2].Value.ToString();
-                        dgvBUSCARyELIMINAR.Rows.RemoveAt(e.RowIndex);
-                    }
-
-                    if (dgvBUSCARyELIMINAR.Columns[e.ColumnIndex].Name == "ColumnDgvElimnar")
-                    {
-                        string ope = dgvBUSCARyELIMINAR.Rows[e.RowIndex].Cells[0].Value.ToString();
-                        //bool resultado = CRUD.EliminarBusqueda(ope);
-                        //if (resultado)
-                        {
-                            dgvBUSCARyELIMINAR.Rows.RemoveAt(e.RowIndex);
-                        }
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-        }
-
+  
         private void panel18_Paint(object sender, PaintEventArgs e)
         {
 
@@ -247,20 +217,6 @@ namespace BusquedaInteligente
             }
         }
 
-        private void comboBox7_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (comboBox7.SelectedIndex == 1)
-            {
-                panel2.Enabled = true;
-            }
-            else
-            {
-                panel2.Enabled = false;
-                radioButton2.Checked = false;
-                radioButton1.Checked = false;
-            }
-        }
-
         string query = "registro_consultas";
         public void llenarcboquery()
         {
@@ -273,6 +229,7 @@ namespace BusquedaInteligente
                 cbosubquery.Items.Add(datareader[1].ToString());
             }
         }
+
         private void iconButton11_Click(object sender, EventArgs e)
         {
             finaleditar = csimpleeditar + " " + whereeditar + " " + andeditar + " " + groupeditar + ";";
@@ -313,9 +270,9 @@ namespace BusquedaInteligente
             transfiere = txtNombreConsultaBUSCARyELIMINAR.Text;
             cbonombreconsulta.Text = transfiere;
             txtTablaConsultaSimple.Text = transfiere;
-            groupBox8.Enabled = true;
-            tabPage4.Hide();
-            tabPage3.Show();
+            groupBox2.Enabled = true;
+            tbpBE.Hide();
+            tbpEditar.Show();
 
         }
 
@@ -338,11 +295,11 @@ namespace BusquedaInteligente
         {
             if (cboAgruparEDITAR.SelectedIndex == 1)
             {
-                groupBox13.Enabled = true;
+                groupBox7.Enabled = true;
             }
             else
             {
-                groupBox13.Enabled = false;
+                groupBox7.Enabled = false;
                 rdbAscEDITAR.Checked = false;
                 rdbdescEDITAR.Checked = false;
             }
@@ -442,13 +399,13 @@ namespace BusquedaInteligente
         {
             if ((chkcondicioneseditar.Checked == true) && (csimpleeditar != ""))
             {
-                groupBox9.Enabled = true;
-                groupBox12.Enabled = true;
+                groupBox4.Enabled = true;
+                groupBox6.Enabled = true;
             }
             else
             {
-                groupBox9.Enabled = false;
-                groupBox12.Enabled = false;
+                groupBox4.Enabled = false;
+                groupBox6.Enabled = false;
                 chkcondicioneseditar.Checked = false;
             }
         }
@@ -541,6 +498,16 @@ namespace BusquedaInteligente
         private void iconButton25_Click(object sender, EventArgs e)
         {
             actualizaconsultas2(txtNombreConsultaBUSCARyELIMINAR.Text);
+        }
+
+        private void btnActualizarBUSCARyELIMINAR_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
     }

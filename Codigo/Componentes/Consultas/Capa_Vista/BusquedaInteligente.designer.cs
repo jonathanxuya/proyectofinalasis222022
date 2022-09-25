@@ -93,6 +93,7 @@ namespace BusquedaInteligente
             this.label16 = new System.Windows.Forms.Label();
             this.tbpEditar = new System.Windows.Forms.TabPage();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.cbonombreconsulta = new System.Windows.Forms.ComboBox();
             this.txtCadenaGeneradaEDITAR = new System.Windows.Forms.TextBox();
             this.label33 = new System.Windows.Forms.Label();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
@@ -100,7 +101,6 @@ namespace BusquedaInteligente
             this.cboCampoAgruparEDITAR = new System.Windows.Forms.ComboBox();
             this.btnCancelarAgruparOrdenarEDITAR = new FontAwesome.Sharp.IconButton();
             this.btnAgregarAgruparOrdenarEDITAR = new FontAwesome.Sharp.IconButton();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.rdbdescEDITAR = new System.Windows.Forms.RadioButton();
             this.rdbAscEDITAR = new System.Windows.Forms.RadioButton();
             this.label13 = new System.Windows.Forms.Label();
@@ -160,7 +160,7 @@ namespace BusquedaInteligente
             this.label32 = new System.Windows.Forms.Label();
             this.dgvBUSCARyELIMINAR = new System.Windows.Forms.DataGridView();
             this.txtNombreConsultaBUSCARyELIMINAR = new System.Windows.Forms.TextBox();
-            this.cbonombreconsulta = new System.Windows.Forms.ComboBox();
+            this.groupBox7 = new System.Windows.Forms.GroupBox();
             this.panel12.SuspendLayout();
             this.panel13.SuspendLayout();
             this.panel14.SuspendLayout();
@@ -177,7 +177,6 @@ namespace BusquedaInteligente
             this.tbpEditar.SuspendLayout();
             this.panel1.SuspendLayout();
             this.groupBox6.SuspendLayout();
-            this.panel2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox5.SuspendLayout();
             this.groupBox4.SuspendLayout();
@@ -185,6 +184,7 @@ namespace BusquedaInteligente
             this.tbpBE.SuspendLayout();
             this.panel20.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBUSCARyELIMINAR)).BeginInit();
+            this.groupBox7.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel12
@@ -879,6 +879,15 @@ namespace BusquedaInteligente
             this.panel1.Size = new System.Drawing.Size(952, 698);
             this.panel1.TabIndex = 1;
             // 
+            // cbonombreconsulta
+            // 
+            this.cbonombreconsulta.BackColor = System.Drawing.Color.White;
+            this.cbonombreconsulta.FormattingEnabled = true;
+            this.cbonombreconsulta.Location = new System.Drawing.Point(293, 9);
+            this.cbonombreconsulta.Name = "cbonombreconsulta";
+            this.cbonombreconsulta.Size = new System.Drawing.Size(443, 21);
+            this.cbonombreconsulta.TabIndex = 39;
+            // 
             // txtCadenaGeneradaEDITAR
             // 
             this.txtCadenaGeneradaEDITAR.BackColor = System.Drawing.Color.White;
@@ -899,11 +908,11 @@ namespace BusquedaInteligente
             // 
             // groupBox6
             // 
+            this.groupBox6.Controls.Add(this.groupBox7);
             this.groupBox6.Controls.Add(this.cboAgruparEDITAR);
             this.groupBox6.Controls.Add(this.cboCampoAgruparEDITAR);
             this.groupBox6.Controls.Add(this.btnCancelarAgruparOrdenarEDITAR);
             this.groupBox6.Controls.Add(this.btnAgregarAgruparOrdenarEDITAR);
-            this.groupBox6.Controls.Add(this.panel2);
             this.groupBox6.Controls.Add(this.label13);
             this.groupBox6.Controls.Add(this.label14);
             this.groupBox6.Location = new System.Drawing.Point(3, 519);
@@ -966,20 +975,11 @@ namespace BusquedaInteligente
             this.btnAgregarAgruparOrdenarEDITAR.UseVisualStyleBackColor = true;
             this.btnAgregarAgruparOrdenarEDITAR.Click += new System.EventHandler(this.btnAgregarAgruparOrdenarEDITAR_Click);
             // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.rdbdescEDITAR);
-            this.panel2.Controls.Add(this.rdbAscEDITAR);
-            this.panel2.Location = new System.Drawing.Point(206, 23);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(194, 51);
-            this.panel2.TabIndex = 33;
-            // 
             // rdbdescEDITAR
             // 
             this.rdbdescEDITAR.AutoSize = true;
             this.rdbdescEDITAR.BackColor = System.Drawing.Color.Transparent;
-            this.rdbdescEDITAR.Location = new System.Drawing.Point(11, 17);
+            this.rdbdescEDITAR.Location = new System.Drawing.Point(21, 36);
             this.rdbdescEDITAR.Name = "rdbdescEDITAR";
             this.rdbdescEDITAR.Size = new System.Drawing.Size(50, 17);
             this.rdbdescEDITAR.TabIndex = 3;
@@ -991,7 +991,7 @@ namespace BusquedaInteligente
             // 
             this.rdbAscEDITAR.AutoSize = true;
             this.rdbAscEDITAR.BackColor = System.Drawing.Color.Transparent;
-            this.rdbAscEDITAR.Location = new System.Drawing.Point(122, 17);
+            this.rdbAscEDITAR.Location = new System.Drawing.Point(136, 36);
             this.rdbAscEDITAR.Name = "rdbAscEDITAR";
             this.rdbAscEDITAR.Size = new System.Drawing.Size(43, 17);
             this.rdbAscEDITAR.TabIndex = 2;
@@ -1617,6 +1617,7 @@ namespace BusquedaInteligente
             this.btnActualizarBUSCARyELIMINAR.Text = "Update";
             this.btnActualizarBUSCARyELIMINAR.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnActualizarBUSCARyELIMINAR.UseVisualStyleBackColor = true;
+            this.btnActualizarBUSCARyELIMINAR.Click += new System.EventHandler(this.btnActualizarBUSCARyELIMINAR_Click);
             // 
             // iconButton25
             // 
@@ -1659,14 +1660,16 @@ namespace BusquedaInteligente
             this.txtNombreConsultaBUSCARyELIMINAR.Size = new System.Drawing.Size(300, 20);
             this.txtNombreConsultaBUSCARyELIMINAR.TabIndex = 9;
             // 
-            // cbonombreconsulta
+            // groupBox7
             // 
-            this.cbonombreconsulta.BackColor = System.Drawing.Color.White;
-            this.cbonombreconsulta.FormattingEnabled = true;
-            this.cbonombreconsulta.Location = new System.Drawing.Point(293, 9);
-            this.cbonombreconsulta.Name = "cbonombreconsulta";
-            this.cbonombreconsulta.Size = new System.Drawing.Size(443, 21);
-            this.cbonombreconsulta.TabIndex = 39;
+            this.groupBox7.Controls.Add(this.rdbdescEDITAR);
+            this.groupBox7.Controls.Add(this.rdbAscEDITAR);
+            this.groupBox7.Location = new System.Drawing.Point(200, 19);
+            this.groupBox7.Name = "groupBox7";
+            this.groupBox7.Size = new System.Drawing.Size(200, 63);
+            this.groupBox7.TabIndex = 40;
+            this.groupBox7.TabStop = false;
+            this.groupBox7.Text = "groupBox7";
             // 
             // Busqueda
             // 
@@ -1704,8 +1707,6 @@ namespace BusquedaInteligente
             this.panel1.PerformLayout();
             this.groupBox6.ResumeLayout(false);
             this.groupBox6.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             this.groupBox5.ResumeLayout(false);
@@ -1718,6 +1719,8 @@ namespace BusquedaInteligente
             this.panel20.ResumeLayout(false);
             this.panel20.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBUSCARyELIMINAR)).EndInit();
+            this.groupBox7.ResumeLayout(false);
+            this.groupBox7.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1848,7 +1851,6 @@ namespace BusquedaInteligente
         private System.Windows.Forms.ComboBox cboCampoAgruparEDITAR;
         private FontAwesome.Sharp.IconButton btnCancelarAgruparOrdenarEDITAR;
         private FontAwesome.Sharp.IconButton btnAgregarAgruparOrdenarEDITAR;
-        private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.RadioButton rdbdescEDITAR;
         private System.Windows.Forms.RadioButton rdbAscEDITAR;
         private System.Windows.Forms.Label label13;
@@ -1856,6 +1858,7 @@ namespace BusquedaInteligente
         private System.Windows.Forms.CheckBox chkcondicioneseditar;
         private System.Windows.Forms.TextBox txtcamposelectoseditar;
         private System.Windows.Forms.ComboBox cbonombreconsulta;
+        private System.Windows.Forms.GroupBox groupBox7;
     }
 }
 
