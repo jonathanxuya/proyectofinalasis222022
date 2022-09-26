@@ -32,7 +32,7 @@ namespace Capa_Vista
         {
             InitializeComponent(); 
         }
-       
+
 
         /*private void button1_Click(object sender, EventArgs e)
          {
@@ -43,33 +43,40 @@ namespace Capa_Vista
              }
          }
         */
-        //CRUD crud = new CRUD();
+
 
         private void btnNuevo_Click(object sender, EventArgs e)
         {
-            //bool resultado = crud.InsertBusqueda(textBox12.Text, textBox14.Text, textBox15.Text, textBox11.Text);
-            //if (resultado)
+            Capa_ControladorConsultas.clscontrolador crud = new Capa_ControladorConsultas.clscontrolador();
+           bool resultado = crud.InsertBusqueda(txtNombreConsulta.Text, cboTabla.Text, comboBox11.Text, textBox11.Text);
+            
+            if (resultado)
+
             {
                 MessageBox.Show("Datos guardados");
             }
+
+           textBox1.Text = (txtNombreConsulta.Text + "+" + cboTabla.Text + "+" + comboBox11.Text + "+" + textBox11.Text);
 
         }
 
         private void iconButton7_Click(object sender, EventArgs e)
         {
-            //textBox12.Clear();
-            //textBox14.Clear();
-            //textBox15.Clear();
-            //textBox11.Clear();
+            txtNombreConsulta.Clear();
+            cboTabla.ResetText();
+            comboBox11.ResetText();
+            textBox11.Clear();
+
 
 
         }
 
-        //CRUDC crudc = new CRUDC();
+        
         private void iconButton3_Click(object sender, EventArgs e)
         {
-            //bool resultado = crudc.InsertBusquedaCompleja(textBox16.Text, textBox17.Text, textBox10.Text);
-            //if (resultado)
+            Capa_ControladorConsultas.clscontrolador crud = new Capa_ControladorConsultas.clscontrolador();
+            bool resultado = crud.InsertBusquedaCompleja(comboBox13.Text, comboBox12.Text, textBox16.Text);
+            if (resultado)
             {
                 MessageBox.Show("Datos guardados");
             }
@@ -77,15 +84,18 @@ namespace Capa_Vista
 
         private void iconButton8_Click(object sender, EventArgs e)
         {
-            //textBox16.Clear();
-            //textBox17.Clear();
-            //textBox10.Clear();
+            comboBox13.ResetText();
+            comboBox12.ResetText();
+            textBox16.Clear();
 
         }
 
         private void iconButton4_Click(object sender, EventArgs e)
         {
 
+            Capa_ControladorConsultas.clscontrolador crud = new Capa_ControladorConsultas.clscontrolador();
+            bool resultado = crud.InsertBusquedaCompleja(comboBox13.Text, comboBox12.Text, textBox16.Text);
+            if (resultado)
             {
                 MessageBox.Show("Datos guardados");
             }
@@ -93,43 +103,42 @@ namespace Capa_Vista
 
         private void iconButton9_Click(object sender, EventArgs e)
         {
-            //textBox18.Clear();
-            //textBox19.Clear();
-            textBox9.Clear();
+            comboBox13.ResetText();
+            comboBox12.ResetText();
+            textBox16.Clear();
         }
 
         private void iconButton5_Click(object sender, EventArgs e)
         {
+            Capa_ControladorConsultas.clscontrolador crud = new Capa_ControladorConsultas.clscontrolador();
+            bool resultado = crud.InsertBusquedaCompleja1(comboBox16.Text, comboBox17.Text);
+            if (resultado)
             {
-
-                {
-                    MessageBox.Show("Datos guardados");
-                }
+                MessageBox.Show("Datos guardados");
             }
         }
 
         private void iconButton10_Click(object sender, EventArgs e)
         {
-            //textBox20.Clear();
-            //textBox21.Clear();
-            textBox8.Clear();
+            comboBox16.ResetText();
+            comboBox17.ResetText();
+
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            //textBox20.Clear();
-            //textBox21.Clear();
-            //textBox8.Clear();
-            //textBox18.Clear();
-            //textBox19.Clear();
-            //textBox9.Clear();
-            //textBox16.Clear();
-            //textBox17.Clear();
-            //textBox10.Clear();
-            //textBox12.Clear();
-            //textBox14.Clear();
-            //textBox15.Clear();
-            //textBox11.Clear();
+            txtNombreConsulta.Clear();
+            cboTabla.ResetText();
+            comboBox11.ResetText();
+            textBox11.Clear();
+            comboBox16.ResetText();
+            comboBox17.ResetText();
+            comboBox13.ResetText();
+            comboBox12.ResetText();
+            textBox16.Clear();
+            comboBox14.ResetText();
+            comboBox15.ResetText();
+            textBox9.Clear();
 
         }
 
@@ -141,7 +150,8 @@ namespace Capa_Vista
 
         private void iconButton2_Click(object sender, EventArgs e)
         {
-
+          
+           // textBox1.Text = txtNombreConsulta.Text+ cboTabla.Text+ comboBox11.Text+ textBox11.Text;
         }
 
         //se necesita actualizaciones para terminar boton eliminar
@@ -512,6 +522,22 @@ namespace Capa_Vista
         private void panel2_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void richTextBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void iconButton6_Click(object sender, EventArgs e)
+        {
+            Capa_ControladorConsultas.clscontrolador crud = new Capa_ControladorConsultas.clscontrolador();
+            textBox8.Text = "INSERT INTO" + "" + query;
         }
     }
     }

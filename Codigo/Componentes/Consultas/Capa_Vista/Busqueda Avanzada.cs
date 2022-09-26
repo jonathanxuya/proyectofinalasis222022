@@ -175,5 +175,10 @@ namespace Capa_Vista
             buscaren = "";
             txt_BuscaPor.Text = "";
         }
+
+        private void dgvDato_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
