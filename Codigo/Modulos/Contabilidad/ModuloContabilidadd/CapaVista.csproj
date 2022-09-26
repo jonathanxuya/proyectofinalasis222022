@@ -68,11 +68,11 @@
     <Compile Include="Activos Fijos.designer.cs">
       <DependentUpon>Activos Fijos.cs</DependentUpon>
     </Compile>
-    <Compile Include="Activos.cs">
+    <Compile Include="Nuevo_MDI.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Activos.Designer.cs">
-      <DependentUpon>Activos.cs</DependentUpon>
+    <Compile Include="Nuevo_MDI.designer.cs">
+      <DependentUpon>Nuevo_MDI.cs</DependentUpon>
     </Compile>
     <Compile Include="Cierre Contable.cs">
       <SubType>Form</SubType>
@@ -91,12 +91,6 @@
     </Compile>
     <Compile Include="Estados Financieros.designer.cs">
       <DependentUpon>Estados Financieros.cs</DependentUpon>
-    </Compile>
-    <Compile Include="EstadosFinancieros.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="EstadosFinancieros.Designer.cs">
-      <DependentUpon>EstadosFinancieros.cs</DependentUpon>
     </Compile>
     <Compile Include="Form_1.cs">
       <SubType>Form</SubType>
@@ -134,12 +128,6 @@
     <Compile Include="Polizas_Locales.designer.cs">
       <DependentUpon>Polizas_Locales.cs</DependentUpon>
     </Compile>
-    <Compile Include="Presupuesto.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Presupuesto.Designer.cs">
-      <DependentUpon>Presupuesto.cs</DependentUpon>
-    </Compile>
     <Compile Include="Presupuestos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -151,8 +139,8 @@
     <EmbeddedResource Include="Activos Fijos.resx">
       <DependentUpon>Activos Fijos.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Activos.resx">
-      <DependentUpon>Activos.cs</DependentUpon>
+    <EmbeddedResource Include="Nuevo_MDI.resx">
+      <DependentUpon>Nuevo_MDI.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Cierre Contable.resx">
       <DependentUpon>Cierre Contable.cs</DependentUpon>
@@ -162,9 +150,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Estados Financieros.resx">
       <DependentUpon>Estados Financieros.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="EstadosFinancieros.resx">
-      <DependentUpon>EstadosFinancieros.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form_1.resx">
       <DependentUpon>Form_1.cs</DependentUpon>
@@ -183,9 +168,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Polizas_Locales.resx">
       <DependentUpon>Polizas_Locales.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Presupuesto.resx">
-      <DependentUpon>Presupuesto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presupuestos.resx">
       <DependentUpon>Presupuestos.cs</DependentUpon>
