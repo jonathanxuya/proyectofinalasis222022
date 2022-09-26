@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Capa_Vista;
 
 
 namespace EjecucionConsultaInteligente
@@ -17,7 +18,8 @@ namespace EjecucionConsultaInteligente
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new EjecucionConsultaInteligente.Form1());
+            Application.Run(new Capa_Vista.Busqueda());
         }
     }
 }
+

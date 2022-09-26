@@ -5,12 +5,10 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.Odbc;
 
-namespace Capa_Modelo
+namespace Capa_ModeloConsultas
 {
-    public class Class1
+    public class Conexion
     {
-        class Conexion
-        {
             //Clase de conexion --------------
             public OdbcConnection conexion()
             {
@@ -40,5 +38,4 @@ namespace Capa_Modelo
                 }
             }
         }
-    }
 }
