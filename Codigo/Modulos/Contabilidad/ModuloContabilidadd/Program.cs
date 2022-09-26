@@ -16,7 +16,7 @@ namespace ModuloContabilidadd
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new ContenedorCF());
+            Application.Run(new Nuevo_MDI());
         }
     }
 }
