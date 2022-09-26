@@ -65,6 +65,7 @@ namespace Capa_Vista
             this.label25 = new System.Windows.Forms.Label();
             this.label26 = new System.Windows.Forms.Label();
             this.panel18 = new System.Windows.Forms.Panel();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.comboBox11 = new System.Windows.Forms.ComboBox();
             this.cboTabla = new System.Windows.Forms.ComboBox();
             this.iconButton7 = new FontAwesome.Sharp.IconButton();
@@ -87,8 +88,8 @@ namespace Capa_Vista
             this.cbosubquery = new System.Windows.Forms.ComboBox();
             this.iconButton27 = new FontAwesome.Sharp.IconButton();
             this.label17 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.comboBox9 = new System.Windows.Forms.ComboBox();
+            this.txtCadenaGeneradaConsulta = new System.Windows.Forms.TextBox();
+            this.cboQueryy = new System.Windows.Forms.ComboBox();
             this.label16 = new System.Windows.Forms.Label();
             this.tbpEditar = new System.Windows.Forms.TabPage();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -160,7 +161,6 @@ namespace Capa_Vista
             this.label32 = new System.Windows.Forms.Label();
             this.dgvBUSCARyELIMINAR = new System.Windows.Forms.DataGridView();
             this.txtNombreConsultaBUSCARyELIMINAR = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.panel12.SuspendLayout();
             this.panel13.SuspendLayout();
             this.panel14.SuspendLayout();
@@ -191,6 +191,7 @@ namespace Capa_Vista
             // 
             this.panel12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(247)))), ((int)(((byte)(253)))));
             this.panel12.Controls.Add(this.btnEliminar);
+            this.panel12.Controls.Add(this.checkBox3);
             this.panel12.Controls.Add(this.iconButton6);
             this.panel12.Controls.Add(this.textBox8);
             this.panel12.Controls.Add(this.label18);
@@ -198,7 +199,7 @@ namespace Capa_Vista
             this.panel12.Controls.Add(this.panel15);
             this.panel12.Controls.Add(this.panel18);
             this.panel12.Location = new System.Drawing.Point(20, 20);
-            this.panel12.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel12.Margin = new System.Windows.Forms.Padding(4);
             this.panel12.Name = "panel12";
             this.panel12.Size = new System.Drawing.Size(1471, 847);
             this.panel12.TabIndex = 1;
@@ -210,7 +211,7 @@ namespace Capa_Vista
             this.btnEliminar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnEliminar.IconSize = 50;
             this.btnEliminar.Location = new System.Drawing.Point(792, 622);
-            this.btnEliminar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnEliminar.Margin = new System.Windows.Forms.Padding(4);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(83, 84);
             this.btnEliminar.TabIndex = 11;
@@ -226,7 +227,7 @@ namespace Capa_Vista
             this.iconButton6.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton6.IconSize = 60;
             this.iconButton6.Location = new System.Drawing.Point(699, 622);
-            this.iconButton6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.iconButton6.Margin = new System.Windows.Forms.Padding(4);
             this.iconButton6.Name = "iconButton6";
             this.iconButton6.Size = new System.Drawing.Size(85, 84);
             this.iconButton6.TabIndex = 10;
@@ -238,10 +239,11 @@ namespace Capa_Vista
             // textBox8
             // 
             this.textBox8.Location = new System.Drawing.Point(253, 799);
-            this.textBox8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox8.Margin = new System.Windows.Forms.Padding(4);
             this.textBox8.Name = "textBox8";
             this.textBox8.Size = new System.Drawing.Size(661, 22);
             this.textBox8.TabIndex = 7;
+            this.textBox8.TextChanged += new System.EventHandler(this.textBox8_TextChanged);
             // 
             // label18
             // 
@@ -263,7 +265,7 @@ namespace Capa_Vista
             this.panel13.Controls.Add(this.label19);
             this.panel13.Controls.Add(this.label20);
             this.panel13.Location = new System.Drawing.Point(24, 575);
-            this.panel13.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel13.Margin = new System.Windows.Forms.Padding(4);
             this.panel13.Name = "panel13";
             this.panel13.Size = new System.Drawing.Size(635, 199);
             this.panel13.TabIndex = 3;
@@ -271,8 +273,12 @@ namespace Capa_Vista
             // comboBox16
             // 
             this.comboBox16.FormattingEnabled = true;
+            this.comboBox16.Items.AddRange(new object[] {
+            "Seleccionar",
+            "Agrupar ",
+            "Ordenar"});
             this.comboBox16.Location = new System.Drawing.Point(140, 31);
-            this.comboBox16.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.comboBox16.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox16.Name = "comboBox16";
             this.comboBox16.Size = new System.Drawing.Size(141, 24);
             this.comboBox16.TabIndex = 28;
@@ -284,7 +290,7 @@ namespace Capa_Vista
             this.iconButton10.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton10.IconSize = 60;
             this.iconButton10.Location = new System.Drawing.Point(472, 64);
-            this.iconButton10.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.iconButton10.Margin = new System.Windows.Forms.Padding(4);
             this.iconButton10.Name = "iconButton10";
             this.iconButton10.Size = new System.Drawing.Size(85, 84);
             this.iconButton10.TabIndex = 30;
@@ -297,7 +303,7 @@ namespace Capa_Vista
             // 
             this.comboBox17.FormattingEnabled = true;
             this.comboBox17.Location = new System.Drawing.Point(141, 80);
-            this.comboBox17.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.comboBox17.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox17.Name = "comboBox17";
             this.comboBox17.Size = new System.Drawing.Size(141, 24);
             this.comboBox17.TabIndex = 27;
@@ -310,7 +316,7 @@ namespace Capa_Vista
             this.iconButton5.IconSize = 60;
             this.iconButton5.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.iconButton5.Location = new System.Drawing.Point(364, 64);
-            this.iconButton5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.iconButton5.Margin = new System.Windows.Forms.Padding(4);
             this.iconButton5.Name = "iconButton5";
             this.iconButton5.Size = new System.Drawing.Size(85, 84);
             this.iconButton5.TabIndex = 29;
@@ -324,7 +330,7 @@ namespace Capa_Vista
             this.panel14.Controls.Add(this.radioButton3);
             this.panel14.Controls.Add(this.radioButton4);
             this.panel14.Location = new System.Drawing.Point(61, 133);
-            this.panel14.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel14.Margin = new System.Windows.Forms.Padding(4);
             this.panel14.Name = "panel14";
             this.panel14.Size = new System.Drawing.Size(259, 63);
             this.panel14.TabIndex = 4;
@@ -333,7 +339,7 @@ namespace Capa_Vista
             // 
             this.radioButton3.AutoSize = true;
             this.radioButton3.Location = new System.Drawing.Point(132, 23);
-            this.radioButton3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.radioButton3.Margin = new System.Windows.Forms.Padding(4);
             this.radioButton3.Name = "radioButton3";
             this.radioButton3.Size = new System.Drawing.Size(66, 21);
             this.radioButton3.TabIndex = 1;
@@ -345,7 +351,7 @@ namespace Capa_Vista
             // 
             this.radioButton4.AutoSize = true;
             this.radioButton4.Location = new System.Drawing.Point(20, 23);
-            this.radioButton4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.radioButton4.Margin = new System.Windows.Forms.Padding(4);
             this.radioButton4.Name = "radioButton4";
             this.radioButton4.Size = new System.Drawing.Size(56, 21);
             this.radioButton4.TabIndex = 0;
@@ -376,12 +382,11 @@ namespace Capa_Vista
             // panel15
             // 
             this.panel15.Controls.Add(this.panel16);
-            this.panel15.Controls.Add(this.checkBox3);
             this.panel15.Controls.Add(this.panel17);
-            this.panel15.Location = new System.Drawing.Point(24, 304);
-            this.panel15.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel15.Location = new System.Drawing.Point(24, 326);
+            this.panel15.Margin = new System.Windows.Forms.Padding(4);
             this.panel15.Name = "panel15";
-            this.panel15.Size = new System.Drawing.Size(1433, 246);
+            this.panel15.Size = new System.Drawing.Size(1433, 224);
             this.panel15.TabIndex = 1;
             // 
             // panel16
@@ -395,7 +400,7 @@ namespace Capa_Vista
             this.panel16.Controls.Add(this.label22);
             this.panel16.Controls.Add(this.label23);
             this.panel16.Location = new System.Drawing.Point(643, 53);
-            this.panel16.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel16.Margin = new System.Windows.Forms.Padding(4);
             this.panel16.Name = "panel16";
             this.panel16.Size = new System.Drawing.Size(639, 175);
             this.panel16.TabIndex = 4;
@@ -404,7 +409,7 @@ namespace Capa_Vista
             // 
             this.comboBox15.FormattingEnabled = true;
             this.comboBox15.Location = new System.Drawing.Point(172, 78);
-            this.comboBox15.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.comboBox15.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox15.Name = "comboBox15";
             this.comboBox15.Size = new System.Drawing.Size(132, 24);
             this.comboBox15.TabIndex = 31;
@@ -412,8 +417,10 @@ namespace Capa_Vista
             // comboBox14
             // 
             this.comboBox14.FormattingEnabled = true;
+            this.comboBox14.Items.AddRange(new object[] {
+            "where"});
             this.comboBox14.Location = new System.Drawing.Point(169, 21);
-            this.comboBox14.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.comboBox14.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox14.Name = "comboBox14";
             this.comboBox14.Size = new System.Drawing.Size(136, 24);
             this.comboBox14.TabIndex = 30;
@@ -425,7 +432,7 @@ namespace Capa_Vista
             this.iconButton9.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton9.IconSize = 60;
             this.iconButton9.Location = new System.Drawing.Point(429, 21);
-            this.iconButton9.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.iconButton9.Margin = new System.Windows.Forms.Padding(4);
             this.iconButton9.Name = "iconButton9";
             this.iconButton9.Size = new System.Drawing.Size(85, 84);
             this.iconButton9.TabIndex = 29;
@@ -441,7 +448,7 @@ namespace Capa_Vista
             this.iconButton4.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton4.IconSize = 60;
             this.iconButton4.Location = new System.Drawing.Point(336, 21);
-            this.iconButton4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.iconButton4.Margin = new System.Windows.Forms.Padding(4);
             this.iconButton4.Name = "iconButton4";
             this.iconButton4.Size = new System.Drawing.Size(85, 84);
             this.iconButton4.TabIndex = 28;
@@ -453,7 +460,7 @@ namespace Capa_Vista
             // textBox9
             // 
             this.textBox9.Location = new System.Drawing.Point(169, 132);
-            this.textBox9.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox9.Margin = new System.Windows.Forms.Padding(4);
             this.textBox9.Name = "textBox9";
             this.textBox9.Size = new System.Drawing.Size(136, 22);
             this.textBox9.TabIndex = 23;
@@ -491,13 +498,14 @@ namespace Capa_Vista
             // checkBox3
             // 
             this.checkBox3.AutoSize = true;
-            this.checkBox3.Location = new System.Drawing.Point(32, 25);
-            this.checkBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox3.Location = new System.Drawing.Point(24, 288);
+            this.checkBox3.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox3.Name = "checkBox3";
             this.checkBox3.Size = new System.Drawing.Size(162, 21);
             this.checkBox3.TabIndex = 3;
             this.checkBox3.Text = "Agregar Condiciones";
             this.checkBox3.UseVisualStyleBackColor = true;
+            this.checkBox3.CheckedChanged += new System.EventHandler(this.checkBox3_CheckedChanged);
             // 
             // panel17
             // 
@@ -510,7 +518,7 @@ namespace Capa_Vista
             this.panel17.Controls.Add(this.label25);
             this.panel17.Controls.Add(this.label26);
             this.panel17.Location = new System.Drawing.Point(32, 53);
-            this.panel17.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel17.Margin = new System.Windows.Forms.Padding(4);
             this.panel17.Name = "panel17";
             this.panel17.Size = new System.Drawing.Size(576, 175);
             this.panel17.TabIndex = 2;
@@ -518,8 +526,12 @@ namespace Capa_Vista
             // comboBox13
             // 
             this.comboBox13.FormattingEnabled = true;
+            this.comboBox13.Items.AddRange(new object[] {
+            "AND ",
+            "OR",
+            "NOT"});
             this.comboBox13.Location = new System.Drawing.Point(136, 28);
-            this.comboBox13.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.comboBox13.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox13.Name = "comboBox13";
             this.comboBox13.Size = new System.Drawing.Size(141, 24);
             this.comboBox13.TabIndex = 26;
@@ -528,7 +540,7 @@ namespace Capa_Vista
             // 
             this.comboBox12.FormattingEnabled = true;
             this.comboBox12.Location = new System.Drawing.Point(137, 78);
-            this.comboBox12.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.comboBox12.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox12.Name = "comboBox12";
             this.comboBox12.Size = new System.Drawing.Size(141, 24);
             this.comboBox12.TabIndex = 25;
@@ -536,7 +548,7 @@ namespace Capa_Vista
             // textBox16
             // 
             this.textBox16.Location = new System.Drawing.Point(137, 132);
-            this.textBox16.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox16.Margin = new System.Windows.Forms.Padding(4);
             this.textBox16.Name = "textBox16";
             this.textBox16.Size = new System.Drawing.Size(141, 22);
             this.textBox16.TabIndex = 24;
@@ -548,7 +560,7 @@ namespace Capa_Vista
             this.iconButton8.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton8.IconSize = 60;
             this.iconButton8.Location = new System.Drawing.Point(425, 41);
-            this.iconButton8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.iconButton8.Margin = new System.Windows.Forms.Padding(4);
             this.iconButton8.Name = "iconButton8";
             this.iconButton8.Size = new System.Drawing.Size(85, 84);
             this.iconButton8.TabIndex = 23;
@@ -564,7 +576,7 @@ namespace Capa_Vista
             this.iconButton3.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton3.IconSize = 60;
             this.iconButton3.Location = new System.Drawing.Point(332, 41);
-            this.iconButton3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.iconButton3.Margin = new System.Windows.Forms.Padding(4);
             this.iconButton3.Name = "iconButton3";
             this.iconButton3.Size = new System.Drawing.Size(85, 84);
             this.iconButton3.TabIndex = 22;
@@ -620,17 +632,25 @@ namespace Capa_Vista
             this.panel18.Controls.Add(this.label30);
             this.panel18.Controls.Add(this.label31);
             this.panel18.Location = new System.Drawing.Point(24, 23);
-            this.panel18.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel18.Margin = new System.Windows.Forms.Padding(4);
             this.panel18.Name = "panel18";
             this.panel18.Size = new System.Drawing.Size(1282, 257);
             this.panel18.TabIndex = 0;
             this.panel18.Paint += new System.Windows.Forms.PaintEventHandler(this.panel18_Paint);
             // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(567, 88);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(284, 22);
+            this.textBox1.TabIndex = 30;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
             // comboBox11
             // 
             this.comboBox11.FormattingEnabled = true;
             this.comboBox11.Location = new System.Drawing.Point(209, 103);
-            this.comboBox11.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.comboBox11.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox11.Name = "comboBox11";
             this.comboBox11.Size = new System.Drawing.Size(179, 24);
             this.comboBox11.TabIndex = 29;
@@ -639,7 +659,7 @@ namespace Capa_Vista
             // 
             this.cboTabla.FormattingEnabled = true;
             this.cboTabla.Location = new System.Drawing.Point(209, 63);
-            this.cboTabla.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cboTabla.Margin = new System.Windows.Forms.Padding(4);
             this.cboTabla.Name = "cboTabla";
             this.cboTabla.Size = new System.Drawing.Size(179, 24);
             this.cboTabla.TabIndex = 28;
@@ -651,7 +671,7 @@ namespace Capa_Vista
             this.iconButton7.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton7.IconSize = 60;
             this.iconButton7.Location = new System.Drawing.Point(879, 116);
-            this.iconButton7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.iconButton7.Margin = new System.Windows.Forms.Padding(4);
             this.iconButton7.Name = "iconButton7";
             this.iconButton7.Size = new System.Drawing.Size(85, 84);
             this.iconButton7.TabIndex = 27;
@@ -667,7 +687,7 @@ namespace Capa_Vista
             this.iconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton2.IconSize = 60;
             this.iconButton2.Location = new System.Drawing.Point(879, 25);
-            this.iconButton2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.iconButton2.Margin = new System.Windows.Forms.Padding(4);
             this.iconButton2.Name = "iconButton2";
             this.iconButton2.Size = new System.Drawing.Size(85, 84);
             this.iconButton2.TabIndex = 26;
@@ -684,7 +704,7 @@ namespace Capa_Vista
             this.btnNuevo.IconSize = 60;
             this.btnNuevo.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnNuevo.Location = new System.Drawing.Point(424, 44);
-            this.btnNuevo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnNuevo.Margin = new System.Windows.Forms.Padding(4);
             this.btnNuevo.Name = "btnNuevo";
             this.btnNuevo.Size = new System.Drawing.Size(85, 84);
             this.btnNuevo.TabIndex = 25;
@@ -707,7 +727,7 @@ namespace Capa_Vista
             // 
             this.checkBox4.AutoSize = true;
             this.checkBox4.Location = new System.Drawing.Point(259, 160);
-            this.checkBox4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox4.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox4.Name = "checkBox4";
             this.checkBox4.Size = new System.Drawing.Size(145, 21);
             this.checkBox4.TabIndex = 8;
@@ -717,7 +737,7 @@ namespace Capa_Vista
             // textBox11
             // 
             this.textBox11.Location = new System.Drawing.Point(209, 212);
-            this.textBox11.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox11.Margin = new System.Windows.Forms.Padding(4);
             this.textBox11.Name = "textBox11";
             this.textBox11.Size = new System.Drawing.Size(179, 22);
             this.textBox11.TabIndex = 7;
@@ -725,7 +745,7 @@ namespace Capa_Vista
             // txtNombreConsulta
             // 
             this.txtNombreConsulta.Location = new System.Drawing.Point(209, 15);
-            this.txtNombreConsulta.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtNombreConsulta.Margin = new System.Windows.Forms.Padding(4);
             this.txtNombreConsulta.Name = "txtNombreConsulta";
             this.txtNombreConsulta.Size = new System.Drawing.Size(179, 22);
             this.txtNombreConsulta.TabIndex = 5;
@@ -777,7 +797,7 @@ namespace Capa_Vista
             this.tbcBusqueda.Controls.Add(this.tbpEditar);
             this.tbcBusqueda.Controls.Add(this.tbpBE);
             this.tbcBusqueda.Location = new System.Drawing.Point(13, 14);
-            this.tbcBusqueda.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbcBusqueda.Margin = new System.Windows.Forms.Padding(4);
             this.tbcBusqueda.Name = "tbcBusqueda";
             this.tbcBusqueda.SelectedIndex = 0;
             this.tbcBusqueda.Size = new System.Drawing.Size(1351, 1019);
@@ -787,9 +807,9 @@ namespace Capa_Vista
             // 
             this.tbpCreacion.Controls.Add(this.panel12);
             this.tbpCreacion.Location = new System.Drawing.Point(4, 25);
-            this.tbpCreacion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbpCreacion.Margin = new System.Windows.Forms.Padding(4);
             this.tbpCreacion.Name = "tbpCreacion";
-            this.tbpCreacion.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbpCreacion.Padding = new System.Windows.Forms.Padding(4);
             this.tbpCreacion.Size = new System.Drawing.Size(1343, 990);
             this.tbpCreacion.TabIndex = 0;
             this.tbpCreacion.Text = "Creación";
@@ -800,9 +820,9 @@ namespace Capa_Vista
             this.tbpConsultas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(247)))), ((int)(((byte)(253)))));
             this.tbpConsultas.Controls.Add(this.panel9);
             this.tbpConsultas.Location = new System.Drawing.Point(4, 25);
-            this.tbpConsultas.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbpConsultas.Margin = new System.Windows.Forms.Padding(4);
             this.tbpConsultas.Name = "tbpConsultas";
-            this.tbpConsultas.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbpConsultas.Padding = new System.Windows.Forms.Padding(4);
             this.tbpConsultas.Size = new System.Drawing.Size(1343, 990);
             this.tbpConsultas.TabIndex = 1;
             this.tbpConsultas.Text = "Consultas";
@@ -812,7 +832,7 @@ namespace Capa_Vista
             this.panel9.Controls.Add(this.dataGridView2);
             this.panel9.Controls.Add(this.groupBox1);
             this.panel9.Location = new System.Drawing.Point(33, 20);
-            this.panel9.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel9.Margin = new System.Windows.Forms.Padding(4);
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(1439, 828);
             this.panel9.TabIndex = 1;
@@ -821,37 +841,40 @@ namespace Capa_Vista
             // 
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView2.Location = new System.Drawing.Point(33, 224);
-            this.dataGridView2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataGridView2.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.RowHeadersWidth = 51;
             this.dataGridView2.Size = new System.Drawing.Size(1000, 185);
             this.dataGridView2.TabIndex = 14;
+            this.dataGridView2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick);
             // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.cbosubquery);
             this.groupBox1.Controls.Add(this.iconButton27);
             this.groupBox1.Controls.Add(this.label17);
-            this.groupBox1.Controls.Add(this.textBox7);
-            this.groupBox1.Controls.Add(this.comboBox9);
+            this.groupBox1.Controls.Add(this.txtCadenaGeneradaConsulta);
+            this.groupBox1.Controls.Add(this.cboQueryy);
             this.groupBox1.Controls.Add(this.label16);
             this.groupBox1.Location = new System.Drawing.Point(29, 18);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox1.Size = new System.Drawing.Size(1004, 174);
             this.groupBox1.TabIndex = 13;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "groupBox1";
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // cbosubquery
             // 
             this.cbosubquery.FormattingEnabled = true;
             this.cbosubquery.Location = new System.Drawing.Point(231, 57);
-            this.cbosubquery.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbosubquery.Margin = new System.Windows.Forms.Padding(4);
             this.cbosubquery.Name = "cbosubquery";
             this.cbosubquery.Size = new System.Drawing.Size(27, 24);
             this.cbosubquery.TabIndex = 31;
+            this.cbosubquery.SelectedIndexChanged += new System.EventHandler(this.cbosubquery_SelectedIndexChanged);
             // 
             // iconButton27
             // 
@@ -860,13 +883,14 @@ namespace Capa_Vista
             this.iconButton27.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton27.IconSize = 60;
             this.iconButton27.Location = new System.Drawing.Point(857, 23);
-            this.iconButton27.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.iconButton27.Margin = new System.Windows.Forms.Padding(4);
             this.iconButton27.Name = "iconButton27";
             this.iconButton27.Size = new System.Drawing.Size(85, 84);
             this.iconButton27.TabIndex = 30;
             this.iconButton27.Text = "Buscar";
             this.iconButton27.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.iconButton27.UseVisualStyleBackColor = true;
+            this.iconButton27.Click += new System.EventHandler(this.iconButton27_Click);
             // 
             // label17
             // 
@@ -878,22 +902,23 @@ namespace Capa_Vista
             this.label17.TabIndex = 0;
             this.label17.Text = "Query";
             // 
-            // textBox7
+            // txtCadenaGeneradaConsulta
             // 
-            this.textBox7.Location = new System.Drawing.Point(267, 58);
-            this.textBox7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(581, 22);
-            this.textBox7.TabIndex = 3;
+            this.txtCadenaGeneradaConsulta.Location = new System.Drawing.Point(267, 58);
+            this.txtCadenaGeneradaConsulta.Margin = new System.Windows.Forms.Padding(4);
+            this.txtCadenaGeneradaConsulta.Name = "txtCadenaGeneradaConsulta";
+            this.txtCadenaGeneradaConsulta.Size = new System.Drawing.Size(581, 22);
+            this.txtCadenaGeneradaConsulta.TabIndex = 3;
             // 
-            // comboBox9
+            // cboQueryy
             // 
-            this.comboBox9.FormattingEnabled = true;
-            this.comboBox9.Location = new System.Drawing.Point(1, 57);
-            this.comboBox9.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.comboBox9.Name = "comboBox9";
-            this.comboBox9.Size = new System.Drawing.Size(220, 24);
-            this.comboBox9.TabIndex = 1;
+            this.cboQueryy.FormattingEnabled = true;
+            this.cboQueryy.Location = new System.Drawing.Point(1, 57);
+            this.cboQueryy.Margin = new System.Windows.Forms.Padding(4);
+            this.cboQueryy.Name = "cboQueryy";
+            this.cboQueryy.Size = new System.Drawing.Size(220, 24);
+            this.cboQueryy.TabIndex = 1;
+            this.cboQueryy.SelectedIndexChanged += new System.EventHandler(this.comboBox9_SelectedIndexChanged);
             // 
             // label16
             // 
@@ -910,9 +935,9 @@ namespace Capa_Vista
             this.tbpEditar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(247)))), ((int)(((byte)(253)))));
             this.tbpEditar.Controls.Add(this.panel1);
             this.tbpEditar.Location = new System.Drawing.Point(4, 25);
-            this.tbpEditar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbpEditar.Margin = new System.Windows.Forms.Padding(4);
             this.tbpEditar.Name = "tbpEditar";
-            this.tbpEditar.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbpEditar.Padding = new System.Windows.Forms.Padding(4);
             this.tbpEditar.Size = new System.Drawing.Size(1343, 990);
             this.tbpEditar.TabIndex = 2;
             this.tbpEditar.Text = "Editar";
@@ -932,7 +957,7 @@ namespace Capa_Vista
             this.panel1.Controls.Add(this.iconButton13);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(8, 7);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1269, 859);
             this.panel1.TabIndex = 1;
@@ -942,16 +967,17 @@ namespace Capa_Vista
             this.cbonombreconsulta.BackColor = System.Drawing.Color.White;
             this.cbonombreconsulta.FormattingEnabled = true;
             this.cbonombreconsulta.Location = new System.Drawing.Point(391, 11);
-            this.cbonombreconsulta.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbonombreconsulta.Margin = new System.Windows.Forms.Padding(4);
             this.cbonombreconsulta.Name = "cbonombreconsulta";
             this.cbonombreconsulta.Size = new System.Drawing.Size(589, 24);
             this.cbonombreconsulta.TabIndex = 39;
+            this.cbonombreconsulta.SelectedIndexChanged += new System.EventHandler(this.cbonombreconsulta_SelectedIndexChanged_1);
             // 
             // txtCadenaGeneradaEDITAR
             // 
             this.txtCadenaGeneradaEDITAR.BackColor = System.Drawing.Color.White;
             this.txtCadenaGeneradaEDITAR.Location = new System.Drawing.Point(359, 801);
-            this.txtCadenaGeneradaEDITAR.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtCadenaGeneradaEDITAR.Margin = new System.Windows.Forms.Padding(4);
             this.txtCadenaGeneradaEDITAR.Multiline = true;
             this.txtCadenaGeneradaEDITAR.Name = "txtCadenaGeneradaEDITAR";
             this.txtCadenaGeneradaEDITAR.Size = new System.Drawing.Size(591, 30);
@@ -977,9 +1003,9 @@ namespace Capa_Vista
             this.groupBox6.Controls.Add(this.label13);
             this.groupBox6.Controls.Add(this.label14);
             this.groupBox6.Location = new System.Drawing.Point(4, 639);
-            this.groupBox6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox6.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox6.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox6.Size = new System.Drawing.Size(789, 132);
             this.groupBox6.TabIndex = 34;
             this.groupBox6.TabStop = false;
@@ -990,9 +1016,9 @@ namespace Capa_Vista
             this.groupBox7.Controls.Add(this.rdbdescEDITAR);
             this.groupBox7.Controls.Add(this.rdbAscEDITAR);
             this.groupBox7.Location = new System.Drawing.Point(267, 23);
-            this.groupBox7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox7.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox7.Name = "groupBox7";
-            this.groupBox7.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox7.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox7.Size = new System.Drawing.Size(267, 78);
             this.groupBox7.TabIndex = 40;
             this.groupBox7.TabStop = false;
@@ -1003,7 +1029,7 @@ namespace Capa_Vista
             this.rdbdescEDITAR.AutoSize = true;
             this.rdbdescEDITAR.BackColor = System.Drawing.Color.Transparent;
             this.rdbdescEDITAR.Location = new System.Drawing.Point(28, 44);
-            this.rdbdescEDITAR.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rdbdescEDITAR.Margin = new System.Windows.Forms.Padding(4);
             this.rdbdescEDITAR.Name = "rdbdescEDITAR";
             this.rdbdescEDITAR.Size = new System.Drawing.Size(61, 21);
             this.rdbdescEDITAR.TabIndex = 3;
@@ -1016,7 +1042,7 @@ namespace Capa_Vista
             this.rdbAscEDITAR.AutoSize = true;
             this.rdbAscEDITAR.BackColor = System.Drawing.Color.Transparent;
             this.rdbAscEDITAR.Location = new System.Drawing.Point(181, 44);
-            this.rdbAscEDITAR.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rdbAscEDITAR.Margin = new System.Windows.Forms.Padding(4);
             this.rdbAscEDITAR.Name = "rdbAscEDITAR";
             this.rdbAscEDITAR.Size = new System.Drawing.Size(52, 21);
             this.rdbAscEDITAR.TabIndex = 2;
@@ -1032,7 +1058,7 @@ namespace Capa_Vista
             "AGRUPAR",
             "ORDENAR"});
             this.cboAgruparEDITAR.Location = new System.Drawing.Point(124, 28);
-            this.cboAgruparEDITAR.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cboAgruparEDITAR.Margin = new System.Windows.Forms.Padding(4);
             this.cboAgruparEDITAR.Name = "cboAgruparEDITAR";
             this.cboAgruparEDITAR.Size = new System.Drawing.Size(132, 24);
             this.cboAgruparEDITAR.TabIndex = 39;
@@ -1043,7 +1069,7 @@ namespace Capa_Vista
             this.cboCampoAgruparEDITAR.BackColor = System.Drawing.Color.White;
             this.cboCampoAgruparEDITAR.FormattingEnabled = true;
             this.cboCampoAgruparEDITAR.Location = new System.Drawing.Point(124, 81);
-            this.cboCampoAgruparEDITAR.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cboCampoAgruparEDITAR.Margin = new System.Windows.Forms.Padding(4);
             this.cboCampoAgruparEDITAR.Name = "cboCampoAgruparEDITAR";
             this.cboCampoAgruparEDITAR.Size = new System.Drawing.Size(132, 24);
             this.cboCampoAgruparEDITAR.TabIndex = 38;
@@ -1056,7 +1082,7 @@ namespace Capa_Vista
             this.btnCancelarAgruparOrdenarEDITAR.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnCancelarAgruparOrdenarEDITAR.IconSize = 60;
             this.btnCancelarAgruparOrdenarEDITAR.Location = new System.Drawing.Point(656, 17);
-            this.btnCancelarAgruparOrdenarEDITAR.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnCancelarAgruparOrdenarEDITAR.Margin = new System.Windows.Forms.Padding(4);
             this.btnCancelarAgruparOrdenarEDITAR.Name = "btnCancelarAgruparOrdenarEDITAR";
             this.btnCancelarAgruparOrdenarEDITAR.Size = new System.Drawing.Size(85, 84);
             this.btnCancelarAgruparOrdenarEDITAR.TabIndex = 37;
@@ -1072,7 +1098,7 @@ namespace Capa_Vista
             this.btnAgregarAgruparOrdenarEDITAR.IconSize = 60;
             this.btnAgregarAgruparOrdenarEDITAR.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnAgregarAgruparOrdenarEDITAR.Location = new System.Drawing.Point(548, 17);
-            this.btnAgregarAgruparOrdenarEDITAR.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAgregarAgruparOrdenarEDITAR.Margin = new System.Windows.Forms.Padding(4);
             this.btnAgregarAgruparOrdenarEDITAR.Name = "btnAgregarAgruparOrdenarEDITAR";
             this.btnAgregarAgruparOrdenarEDITAR.Size = new System.Drawing.Size(85, 84);
             this.btnAgregarAgruparOrdenarEDITAR.TabIndex = 36;
@@ -1107,9 +1133,9 @@ namespace Capa_Vista
             this.groupBox3.Controls.Add(this.groupBox5);
             this.groupBox3.Controls.Add(this.groupBox4);
             this.groupBox3.Location = new System.Drawing.Point(4, 357);
-            this.groupBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox3.Size = new System.Drawing.Size(1216, 274);
             this.groupBox3.TabIndex = 33;
             this.groupBox3.TabStop = false;
@@ -1119,7 +1145,7 @@ namespace Capa_Vista
             // 
             this.chkcondicioneseditar.AutoSize = true;
             this.chkcondicioneseditar.Location = new System.Drawing.Point(23, 34);
-            this.chkcondicioneseditar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.chkcondicioneseditar.Margin = new System.Windows.Forms.Padding(4);
             this.chkcondicioneseditar.Name = "chkcondicioneseditar";
             this.chkcondicioneseditar.Size = new System.Drawing.Size(162, 21);
             this.chkcondicioneseditar.TabIndex = 25;
@@ -1140,9 +1166,9 @@ namespace Capa_Vista
             this.groupBox5.Controls.Add(this.label11);
             this.groupBox5.Controls.Add(this.label12);
             this.groupBox5.Location = new System.Drawing.Point(691, 63);
-            this.groupBox5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox5.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox5.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox5.Size = new System.Drawing.Size(517, 185);
             this.groupBox5.TabIndex = 6;
             this.groupBox5.TabStop = false;
@@ -1160,7 +1186,7 @@ namespace Capa_Vista
             ">",
             ">="});
             this.cbocompwhere.Location = new System.Drawing.Point(164, 102);
-            this.cbocompwhere.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbocompwhere.Margin = new System.Windows.Forms.Padding(4);
             this.cbocompwhere.Name = "cbocompwhere";
             this.cbocompwhere.Size = new System.Drawing.Size(133, 24);
             this.cbocompwhere.TabIndex = 46;
@@ -1169,7 +1195,7 @@ namespace Capa_Vista
             // 
             this.txtValorComparacionEDITAR.BackColor = System.Drawing.Color.White;
             this.txtValorComparacionEDITAR.Location = new System.Drawing.Point(165, 149);
-            this.txtValorComparacionEDITAR.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtValorComparacionEDITAR.Margin = new System.Windows.Forms.Padding(4);
             this.txtValorComparacionEDITAR.Name = "txtValorComparacionEDITAR";
             this.txtValorComparacionEDITAR.Size = new System.Drawing.Size(133, 22);
             this.txtValorComparacionEDITAR.TabIndex = 45;
@@ -1181,7 +1207,7 @@ namespace Capa_Vista
             this.cboTipoComparadorEDITAR.Items.AddRange(new object[] {
             "WHERE"});
             this.cboTipoComparadorEDITAR.Location = new System.Drawing.Point(165, 26);
-            this.cboTipoComparadorEDITAR.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cboTipoComparadorEDITAR.Margin = new System.Windows.Forms.Padding(4);
             this.cboTipoComparadorEDITAR.Name = "cboTipoComparadorEDITAR";
             this.cboTipoComparadorEDITAR.Size = new System.Drawing.Size(132, 24);
             this.cboTipoComparadorEDITAR.TabIndex = 44;
@@ -1191,7 +1217,7 @@ namespace Capa_Vista
             this.cboCampoEDITAR.BackColor = System.Drawing.Color.White;
             this.cboCampoEDITAR.FormattingEnabled = true;
             this.cboCampoEDITAR.Location = new System.Drawing.Point(165, 59);
-            this.cboCampoEDITAR.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cboCampoEDITAR.Margin = new System.Windows.Forms.Padding(4);
             this.cboCampoEDITAR.Name = "cboCampoEDITAR";
             this.cboCampoEDITAR.Size = new System.Drawing.Size(132, 24);
             this.cboCampoEDITAR.TabIndex = 43;
@@ -1213,7 +1239,7 @@ namespace Capa_Vista
             this.txtcancelarComparacionEDITAR.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.txtcancelarComparacionEDITAR.IconSize = 60;
             this.txtcancelarComparacionEDITAR.Location = new System.Drawing.Point(417, 25);
-            this.txtcancelarComparacionEDITAR.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtcancelarComparacionEDITAR.Margin = new System.Windows.Forms.Padding(4);
             this.txtcancelarComparacionEDITAR.Name = "txtcancelarComparacionEDITAR";
             this.txtcancelarComparacionEDITAR.Size = new System.Drawing.Size(85, 84);
             this.txtcancelarComparacionEDITAR.TabIndex = 37;
@@ -1228,7 +1254,7 @@ namespace Capa_Vista
             this.btnAgregarComparacionEDITAR.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnAgregarComparacionEDITAR.IconSize = 60;
             this.btnAgregarComparacionEDITAR.Location = new System.Drawing.Point(324, 25);
-            this.btnAgregarComparacionEDITAR.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAgregarComparacionEDITAR.Margin = new System.Windows.Forms.Padding(4);
             this.btnAgregarComparacionEDITAR.Name = "btnAgregarComparacionEDITAR";
             this.btnAgregarComparacionEDITAR.Size = new System.Drawing.Size(85, 84);
             this.btnAgregarComparacionEDITAR.TabIndex = 36;
@@ -1280,9 +1306,9 @@ namespace Capa_Vista
             this.groupBox4.Controls.Add(this.label8);
             this.groupBox4.Controls.Add(this.label9);
             this.groupBox4.Location = new System.Drawing.Point(23, 63);
-            this.groupBox4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox4.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox4.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox4.Size = new System.Drawing.Size(647, 185);
             this.groupBox4.TabIndex = 5;
             this.groupBox4.TabStop = false;
@@ -1300,7 +1326,7 @@ namespace Capa_Vista
             ">",
             ">="});
             this.cbocompand.Location = new System.Drawing.Point(149, 94);
-            this.cbocompand.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbocompand.Margin = new System.Windows.Forms.Padding(4);
             this.cbocompand.Name = "cbocompand";
             this.cbocompand.Size = new System.Drawing.Size(132, 24);
             this.cbocompand.TabIndex = 42;
@@ -1309,7 +1335,7 @@ namespace Capa_Vista
             // 
             this.txtvalorConsultaComplejaEDITAR.BackColor = System.Drawing.Color.White;
             this.txtvalorConsultaComplejaEDITAR.Location = new System.Drawing.Point(149, 139);
-            this.txtvalorConsultaComplejaEDITAR.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtvalorConsultaComplejaEDITAR.Margin = new System.Windows.Forms.Padding(4);
             this.txtvalorConsultaComplejaEDITAR.Name = "txtvalorConsultaComplejaEDITAR";
             this.txtvalorConsultaComplejaEDITAR.Size = new System.Drawing.Size(132, 22);
             this.txtvalorConsultaComplejaEDITAR.TabIndex = 41;
@@ -1319,7 +1345,7 @@ namespace Capa_Vista
             this.cboCampoConsultaComplejaEDITAR.BackColor = System.Drawing.Color.White;
             this.cboCampoConsultaComplejaEDITAR.FormattingEnabled = true;
             this.cboCampoConsultaComplejaEDITAR.Location = new System.Drawing.Point(149, 57);
-            this.cboCampoConsultaComplejaEDITAR.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cboCampoConsultaComplejaEDITAR.Margin = new System.Windows.Forms.Padding(4);
             this.cboCampoConsultaComplejaEDITAR.Name = "cboCampoConsultaComplejaEDITAR";
             this.cboCampoConsultaComplejaEDITAR.Size = new System.Drawing.Size(132, 24);
             this.cboCampoConsultaComplejaEDITAR.TabIndex = 39;
@@ -1333,7 +1359,7 @@ namespace Capa_Vista
             "OR",
             "NOT"});
             this.cboOperadorLogicoEDITAR.Location = new System.Drawing.Point(149, 23);
-            this.cboOperadorLogicoEDITAR.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cboOperadorLogicoEDITAR.Margin = new System.Windows.Forms.Padding(4);
             this.cboOperadorLogicoEDITAR.Name = "cboOperadorLogicoEDITAR";
             this.cboOperadorLogicoEDITAR.Size = new System.Drawing.Size(132, 24);
             this.cboOperadorLogicoEDITAR.TabIndex = 40;
@@ -1355,7 +1381,7 @@ namespace Capa_Vista
             this.btnCancelarCONSULTACOMPLEJAEDITAR.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnCancelarCONSULTACOMPLEJAEDITAR.IconSize = 60;
             this.btnCancelarCONSULTACOMPLEJAEDITAR.Location = new System.Drawing.Point(425, 38);
-            this.btnCancelarCONSULTACOMPLEJAEDITAR.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnCancelarCONSULTACOMPLEJAEDITAR.Margin = new System.Windows.Forms.Padding(4);
             this.btnCancelarCONSULTACOMPLEJAEDITAR.Name = "btnCancelarCONSULTACOMPLEJAEDITAR";
             this.btnCancelarCONSULTACOMPLEJAEDITAR.Size = new System.Drawing.Size(85, 84);
             this.btnCancelarCONSULTACOMPLEJAEDITAR.TabIndex = 31;
@@ -1370,7 +1396,7 @@ namespace Capa_Vista
             this.btnagregarCONSULTACOMPLEJAEDITAR.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnagregarCONSULTACOMPLEJAEDITAR.IconSize = 60;
             this.btnagregarCONSULTACOMPLEJAEDITAR.Location = new System.Drawing.Point(332, 38);
-            this.btnagregarCONSULTACOMPLEJAEDITAR.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnagregarCONSULTACOMPLEJAEDITAR.Margin = new System.Windows.Forms.Padding(4);
             this.btnagregarCONSULTACOMPLEJAEDITAR.Name = "btnagregarCONSULTACOMPLEJAEDITAR";
             this.btnagregarCONSULTACOMPLEJAEDITAR.Size = new System.Drawing.Size(85, 84);
             this.btnagregarCONSULTACOMPLEJAEDITAR.TabIndex = 30;
@@ -1427,9 +1453,9 @@ namespace Capa_Vista
             this.groupBox2.Controls.Add(this.label5);
             this.groupBox2.Controls.Add(this.label6);
             this.groupBox2.Location = new System.Drawing.Point(4, 57);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox2.Size = new System.Drawing.Size(1019, 293);
             this.groupBox2.TabIndex = 32;
             this.groupBox2.TabStop = false;
@@ -1439,7 +1465,7 @@ namespace Capa_Vista
             // 
             this.txtcamposelectoseditar.BackColor = System.Drawing.Color.White;
             this.txtcamposelectoseditar.Location = new System.Drawing.Point(548, 84);
-            this.txtcamposelectoseditar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtcamposelectoseditar.Margin = new System.Windows.Forms.Padding(4);
             this.txtcamposelectoseditar.Multiline = true;
             this.txtcamposelectoseditar.Name = "txtcamposelectoseditar";
             this.txtcamposelectoseditar.Size = new System.Drawing.Size(299, 100);
@@ -1449,7 +1475,7 @@ namespace Capa_Vista
             // 
             this.txttablaeditar.BackColor = System.Drawing.Color.Azure;
             this.txttablaeditar.Location = new System.Drawing.Point(448, 160);
-            this.txttablaeditar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txttablaeditar.Margin = new System.Windows.Forms.Padding(4);
             this.txttablaeditar.Name = "txttablaeditar";
             this.txttablaeditar.ReadOnly = true;
             this.txttablaeditar.Size = new System.Drawing.Size(59, 22);
@@ -1460,7 +1486,7 @@ namespace Capa_Vista
             // 
             this.txtNombreRepresentativoEDITAR.BackColor = System.Drawing.Color.White;
             this.txtNombreRepresentativoEDITAR.Location = new System.Drawing.Point(228, 236);
-            this.txtNombreRepresentativoEDITAR.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtNombreRepresentativoEDITAR.Margin = new System.Windows.Forms.Padding(4);
             this.txtNombreRepresentativoEDITAR.Name = "txtNombreRepresentativoEDITAR";
             this.txtNombreRepresentativoEDITAR.Size = new System.Drawing.Size(132, 22);
             this.txtNombreRepresentativoEDITAR.TabIndex = 52;
@@ -1470,7 +1496,7 @@ namespace Capa_Vista
             this.cboTablaConsultaSimple.BackColor = System.Drawing.Color.White;
             this.cboTablaConsultaSimple.FormattingEnabled = true;
             this.cboTablaConsultaSimple.Location = new System.Drawing.Point(228, 87);
-            this.cboTablaConsultaSimple.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cboTablaConsultaSimple.Margin = new System.Windows.Forms.Padding(4);
             this.cboTablaConsultaSimple.Name = "cboTablaConsultaSimple";
             this.cboTablaConsultaSimple.Size = new System.Drawing.Size(132, 24);
             this.cboTablaConsultaSimple.TabIndex = 51;
@@ -1480,7 +1506,7 @@ namespace Capa_Vista
             this.cboCamposEDITAR.BackColor = System.Drawing.Color.White;
             this.cboCamposEDITAR.FormattingEnabled = true;
             this.cboCamposEDITAR.Location = new System.Drawing.Point(228, 134);
-            this.cboCamposEDITAR.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cboCamposEDITAR.Margin = new System.Windows.Forms.Padding(4);
             this.cboCamposEDITAR.Name = "cboCamposEDITAR";
             this.cboCamposEDITAR.Size = new System.Drawing.Size(132, 24);
             this.cboCamposEDITAR.TabIndex = 50;
@@ -1490,7 +1516,7 @@ namespace Capa_Vista
             this.txtTablaConsultaSimple.BackColor = System.Drawing.Color.White;
             this.txtTablaConsultaSimple.Enabled = false;
             this.txtTablaConsultaSimple.Location = new System.Drawing.Point(228, 36);
-            this.txtTablaConsultaSimple.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtTablaConsultaSimple.Margin = new System.Windows.Forms.Padding(4);
             this.txtTablaConsultaSimple.Name = "txtTablaConsultaSimple";
             this.txtTablaConsultaSimple.ReadOnly = true;
             this.txtTablaConsultaSimple.Size = new System.Drawing.Size(132, 22);
@@ -1502,7 +1528,7 @@ namespace Capa_Vista
             this.chkSelectTodosConsultaSimple.BackColor = System.Drawing.Color.Transparent;
             this.chkSelectTodosConsultaSimple.Enabled = false;
             this.chkSelectTodosConsultaSimple.Location = new System.Drawing.Point(151, 186);
-            this.chkSelectTodosConsultaSimple.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.chkSelectTodosConsultaSimple.Margin = new System.Windows.Forms.Padding(4);
             this.chkSelectTodosConsultaSimple.Name = "chkSelectTodosConsultaSimple";
             this.chkSelectTodosConsultaSimple.Size = new System.Drawing.Size(143, 21);
             this.chkSelectTodosConsultaSimple.TabIndex = 48;
@@ -1517,7 +1543,7 @@ namespace Capa_Vista
             this.btnCancelarCONSULTASIMPLE.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnCancelarCONSULTASIMPLE.IconSize = 60;
             this.btnCancelarCONSULTASIMPLE.Location = new System.Drawing.Point(892, 140);
-            this.btnCancelarCONSULTASIMPLE.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnCancelarCONSULTASIMPLE.Margin = new System.Windows.Forms.Padding(4);
             this.btnCancelarCONSULTASIMPLE.Name = "btnCancelarCONSULTASIMPLE";
             this.btnCancelarCONSULTASIMPLE.Size = new System.Drawing.Size(85, 84);
             this.btnCancelarCONSULTASIMPLE.TabIndex = 41;
@@ -1532,7 +1558,7 @@ namespace Capa_Vista
             this.btnagregarcamposeditar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnagregarcamposeditar.IconSize = 60;
             this.btnagregarcamposeditar.Location = new System.Drawing.Point(892, 49);
-            this.btnagregarcamposeditar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnagregarcamposeditar.Margin = new System.Windows.Forms.Padding(4);
             this.btnagregarcamposeditar.Name = "btnagregarcamposeditar";
             this.btnagregarcamposeditar.Size = new System.Drawing.Size(85, 84);
             this.btnagregarcamposeditar.TabIndex = 40;
@@ -1549,7 +1575,7 @@ namespace Capa_Vista
             this.btnAgregarCONSULTASIMPLE.IconSize = 60;
             this.btnAgregarCONSULTASIMPLE.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnAgregarCONSULTASIMPLE.Location = new System.Drawing.Point(437, 69);
-            this.btnAgregarCONSULTASIMPLE.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAgregarCONSULTASIMPLE.Margin = new System.Windows.Forms.Padding(4);
             this.btnAgregarCONSULTASIMPLE.Name = "btnAgregarCONSULTASIMPLE";
             this.btnAgregarCONSULTASIMPLE.Size = new System.Drawing.Size(85, 84);
             this.btnAgregarCONSULTASIMPLE.TabIndex = 39;
@@ -1615,7 +1641,7 @@ namespace Capa_Vista
             this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton1.IconSize = 50;
             this.iconButton1.Location = new System.Drawing.Point(948, 646);
-            this.iconButton1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.iconButton1.Margin = new System.Windows.Forms.Padding(4);
             this.iconButton1.Name = "iconButton1";
             this.iconButton1.Size = new System.Drawing.Size(85, 84);
             this.iconButton1.TabIndex = 31;
@@ -1630,7 +1656,7 @@ namespace Capa_Vista
             this.btneditar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btneditar.IconSize = 60;
             this.btneditar.Location = new System.Drawing.Point(855, 646);
-            this.btneditar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btneditar.Margin = new System.Windows.Forms.Padding(4);
             this.btneditar.Name = "btneditar";
             this.btneditar.Size = new System.Drawing.Size(85, 84);
             this.btneditar.TabIndex = 30;
@@ -1642,7 +1668,7 @@ namespace Capa_Vista
             // textBox6
             // 
             this.textBox6.Location = new System.Drawing.Point(276, 898);
-            this.textBox6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox6.Margin = new System.Windows.Forms.Padding(4);
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(716, 22);
             this.textBox6.TabIndex = 12;
@@ -1664,7 +1690,7 @@ namespace Capa_Vista
             this.iconButton13.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton13.IconSize = 60;
             this.iconButton13.Location = new System.Drawing.Point(1031, 4);
-            this.iconButton13.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.iconButton13.Margin = new System.Windows.Forms.Padding(4);
             this.iconButton13.Name = "iconButton13";
             this.iconButton13.Size = new System.Drawing.Size(85, 84);
             this.iconButton13.TabIndex = 29;
@@ -1687,9 +1713,9 @@ namespace Capa_Vista
             this.tbpBE.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(247)))), ((int)(((byte)(253)))));
             this.tbpBE.Controls.Add(this.panel20);
             this.tbpBE.Location = new System.Drawing.Point(4, 25);
-            this.tbpBE.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbpBE.Margin = new System.Windows.Forms.Padding(4);
             this.tbpBE.Name = "tbpBE";
-            this.tbpBE.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbpBE.Padding = new System.Windows.Forms.Padding(4);
             this.tbpBE.Size = new System.Drawing.Size(1343, 990);
             this.tbpBE.TabIndex = 3;
             this.tbpBE.Text = "Buscar/Eliminar";
@@ -1704,7 +1730,7 @@ namespace Capa_Vista
             this.panel20.Controls.Add(this.dgvBUSCARyELIMINAR);
             this.panel20.Controls.Add(this.txtNombreConsultaBUSCARyELIMINAR);
             this.panel20.Location = new System.Drawing.Point(31, 9);
-            this.panel20.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel20.Margin = new System.Windows.Forms.Padding(4);
             this.panel20.Name = "panel20";
             this.panel20.Size = new System.Drawing.Size(1272, 466);
             this.panel20.TabIndex = 18;
@@ -1716,7 +1742,7 @@ namespace Capa_Vista
             this.iconButton12.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton12.IconSize = 50;
             this.iconButton12.Location = new System.Drawing.Point(852, 14);
-            this.iconButton12.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.iconButton12.Margin = new System.Windows.Forms.Padding(4);
             this.iconButton12.Name = "iconButton12";
             this.iconButton12.Size = new System.Drawing.Size(83, 84);
             this.iconButton12.TabIndex = 22;
@@ -1732,7 +1758,7 @@ namespace Capa_Vista
             this.iconButton28.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton28.IconSize = 60;
             this.iconButton28.Location = new System.Drawing.Point(945, 14);
-            this.iconButton28.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.iconButton28.Margin = new System.Windows.Forms.Padding(4);
             this.iconButton28.Name = "iconButton28";
             this.iconButton28.Size = new System.Drawing.Size(85, 84);
             this.iconButton28.TabIndex = 21;
@@ -1749,7 +1775,7 @@ namespace Capa_Vista
             this.btnActualizarBUSCARyELIMINAR.IconSize = 60;
             this.btnActualizarBUSCARyELIMINAR.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnActualizarBUSCARyELIMINAR.Location = new System.Drawing.Point(757, 14);
-            this.btnActualizarBUSCARyELIMINAR.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnActualizarBUSCARyELIMINAR.Margin = new System.Windows.Forms.Padding(4);
             this.btnActualizarBUSCARyELIMINAR.Name = "btnActualizarBUSCARyELIMINAR";
             this.btnActualizarBUSCARyELIMINAR.Size = new System.Drawing.Size(85, 84);
             this.btnActualizarBUSCARyELIMINAR.TabIndex = 20;
@@ -1765,7 +1791,7 @@ namespace Capa_Vista
             this.iconButton25.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton25.IconSize = 60;
             this.iconButton25.Location = new System.Drawing.Point(665, 14);
-            this.iconButton25.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.iconButton25.Margin = new System.Windows.Forms.Padding(4);
             this.iconButton25.Name = "iconButton25";
             this.iconButton25.Size = new System.Drawing.Size(85, 84);
             this.iconButton25.TabIndex = 19;
@@ -1788,7 +1814,7 @@ namespace Capa_Vista
             // 
             this.dgvBUSCARyELIMINAR.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvBUSCARyELIMINAR.Location = new System.Drawing.Point(92, 121);
-            this.dgvBUSCARyELIMINAR.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvBUSCARyELIMINAR.Margin = new System.Windows.Forms.Padding(4);
             this.dgvBUSCARyELIMINAR.Name = "dgvBUSCARyELIMINAR";
             this.dgvBUSCARyELIMINAR.RowHeadersWidth = 51;
             this.dgvBUSCARyELIMINAR.Size = new System.Drawing.Size(1008, 293);
@@ -1797,18 +1823,10 @@ namespace Capa_Vista
             // txtNombreConsultaBUSCARyELIMINAR
             // 
             this.txtNombreConsultaBUSCARyELIMINAR.Location = new System.Drawing.Point(221, 43);
-            this.txtNombreConsultaBUSCARyELIMINAR.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtNombreConsultaBUSCARyELIMINAR.Margin = new System.Windows.Forms.Padding(4);
             this.txtNombreConsultaBUSCARyELIMINAR.Name = "txtNombreConsultaBUSCARyELIMINAR";
             this.txtNombreConsultaBUSCARyELIMINAR.Size = new System.Drawing.Size(399, 22);
             this.txtNombreConsultaBUSCARyELIMINAR.TabIndex = 9;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(567, 88);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(284, 22);
-            this.textBox1.TabIndex = 30;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // Busqueda
             // 
@@ -1827,7 +1845,6 @@ namespace Capa_Vista
             this.panel14.ResumeLayout(false);
             this.panel14.PerformLayout();
             this.panel15.ResumeLayout(false);
-            this.panel15.PerformLayout();
             this.panel16.ResumeLayout(false);
             this.panel16.PerformLayout();
             this.panel17.ResumeLayout(false);
@@ -1899,9 +1916,9 @@ namespace Capa_Vista
         private System.Windows.Forms.TabPage tbpCreacion;
         private System.Windows.Forms.TabPage tbpConsultas;
         private System.Windows.Forms.Panel panel9;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox txtCadenaGeneradaConsulta;
         private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.ComboBox comboBox9;
+        private System.Windows.Forms.ComboBox cboQueryy;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.TabPage tbpEditar;
         private System.Windows.Forms.Panel panel1;

@@ -30,9 +30,14 @@ namespace Capa_Vista
 
         public Busqueda()
         {
-            InitializeComponent(); 
+            InitializeComponent();
         }
-
+        string consulta = "";
+        public void actualizardatagrid()
+        {
+            DataTable dt = cn.llenartb1(consulta);
+            dataGridView2.DataSource = dt;
+        }
 
         /*private void button1_Click(object sender, EventArgs e)
          {
@@ -48,7 +53,7 @@ namespace Capa_Vista
         private void btnNuevo_Click(object sender, EventArgs e)
         {
             Capa_ControladorConsultas.clscontrolador crud = new Capa_ControladorConsultas.clscontrolador();
-           bool resultado = crud.InsertBusqueda(txtNombreConsulta.Text, cboTabla.Text, comboBox11.Text, textBox11.Text);
+           bool resultado = crud.InsertBusqueda(txtNombreConsulta.Text, cboTabla.Text, comboBox11.Text, textBox11.Text, null);
             
             if (resultado)
 
@@ -75,7 +80,7 @@ namespace Capa_Vista
         private void iconButton3_Click(object sender, EventArgs e)
         {
             Capa_ControladorConsultas.clscontrolador crud = new Capa_ControladorConsultas.clscontrolador();
-            bool resultado = crud.InsertBusquedaCompleja(comboBox13.Text, comboBox12.Text, textBox16.Text);
+            bool resultado = crud.InsertBusquedaCompleja(comboBox13.Text, comboBox12.Text, textBox16.Text, null);
             if (resultado)
             {
                 MessageBox.Show("Datos guardados");
@@ -94,7 +99,7 @@ namespace Capa_Vista
         {
 
             Capa_ControladorConsultas.clscontrolador crud = new Capa_ControladorConsultas.clscontrolador();
-            bool resultado = crud.InsertBusquedaCompleja(comboBox13.Text, comboBox12.Text, textBox16.Text);
+            bool resultado = crud.InsertBusquedaCompleja(comboBox14.Text, comboBox15.Text, textBox9.Text, null);
             if (resultado)
             {
                 MessageBox.Show("Datos guardados");
@@ -109,9 +114,10 @@ namespace Capa_Vista
         }
 
         private void iconButton5_Click(object sender, EventArgs e)
+
         {
             Capa_ControladorConsultas.clscontrolador crud = new Capa_ControladorConsultas.clscontrolador();
-            bool resultado = crud.InsertBusquedaCompleja1(comboBox16.Text, comboBox17.Text);
+            bool resultado = crud.InsertBusquedaCompleja1(comboBox16.Text, comboBox17.Text, null);
             if (resultado)
             {
                 MessageBox.Show("Datos guardados");
@@ -234,12 +240,12 @@ namespace Capa_Vista
         string query = "registro_consultas";
         public void llenarcboquery()
         {
-            comboBox9.Items.Clear();
+            cboQueryy.Items.Clear();
             cbosubquery.Items.Clear();
             OdbcDataReader datareader = cn.llenarcboq(query);
             while (datareader.Read())
             {
-                comboBox9.Items.Add(datareader[0].ToString());
+                cboQueryy.Items.Add(datareader[0].ToString());
                 cbosubquery.Items.Add(datareader[1].ToString());
             }
         }
@@ -537,10 +543,80 @@ namespace Capa_Vista
         private void iconButton6_Click(object sender, EventArgs e)
         {
             Capa_ControladorConsultas.clscontrolador crud = new Capa_ControladorConsultas.clscontrolador();
-            textBox8.Text = "INSERT INTO" + "" + query;
+            textBox8.Text = "SELECT FROM" + "*"+ "_" + "WHERE" + query + "_" + "INSERTED" + "";
+        }
+
+        private void textBox8_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkBox3_CheckedChanged(object sender, EventArgs e)
+        {
+        
+
+
+            if (checkBox3.Checked == true)
+            
+            {
+                panel15.Enabled = true;
+                panel13.Enabled = true;
+            }else
+            {
+                panel15.Enabled = false;
+                panel13.Enabled = false;
+                checkBox3.Checked = false;
+
+            }
+            
+
+        }
+
+        public void habilitaciones()
+        {
+            panel15.Enabled = false;
+            panel13.Enabled = false;
+            checkBox3.Checked = false;
+           
+
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox9_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            cboQueryy.SelectedIndex = cboQueryy.SelectedIndex;
+            txtCadenaGeneradaConsulta.Text = cboQueryy.SelectedItem.ToString();
+            consulta = txtCadenaGeneradaConsulta.Text;
+        }
+
+        private void cbosubquery_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void iconButton27_Click(object sender, EventArgs e)
+        {
+            actualizardatagrid();
+        }
+
+        private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            DataTable dt = cn.llenartb1(consulta);
+            dataGridView2.DataSource = dt;
+        }
+
+        private void cbonombreconsulta_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+            txtTablaConsultaSimple.Text = cbonombreconsulta.SelectedItem.ToString();
+            groupBox2.Enabled = true;
         }
     }
     }
+    
 
 
 
