@@ -10,8 +10,9 @@ using System.Windows.Forms;
 using Capa_ControladorConsultas;
 using System.Data.Odbc;
 
-namespace BusquedaInteligente
+namespace Capa_Vista
 {
+
     public partial class Busqueda : Form
     {
 
