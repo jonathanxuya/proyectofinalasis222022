@@ -31,11 +31,20 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Capa_ControladorContabilidad">
+      <HintPath>..\Capa_ControladorContabilidad\bin\Debug\Capa_ControladorContabilidad.dll</HintPath>
+    </Reference>
     <Reference Include="FontAwesome.Sharp, Version=6.1.1.0, Culture=neutral, PublicKeyToken=d16d1e4e568ec10f, processorArchitecture=MSIL">
       <HintPath>..\packages\FontAwesome.Sharp.6.1.1\lib\net472\FontAwesome.Sharp.dll</HintPath>
     </Reference>
+    <Reference Include="NavegadorVista">
+      <HintPath>..\..\..\Componentes\Navegador\Vista\bin\Debug\NavegadorVista.dll</HintPath>
+    </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
+    <Reference Include="Seguridad_Controlador">
+      <HintPath>..\..\..\Componentes\Seguridad\Colchoneria\Capa_controlador\bin\Debug\Seguridad_Controlador.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />

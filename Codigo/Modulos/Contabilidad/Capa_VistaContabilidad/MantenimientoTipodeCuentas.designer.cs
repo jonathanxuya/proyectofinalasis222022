@@ -46,6 +46,8 @@ namespace Capa_VistaContabilidad
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.navegador1 = new NavegadorVista.Navegador();
+            this.groupBox1.SuspendLayout();
             this.Detalle.SuspendLayout();
             this.groupBox5.SuspendLayout();
             this.groupBox4.SuspendLayout();
@@ -54,10 +56,11 @@ namespace Capa_VistaContabilidad
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.navegador1);
             this.groupBox1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(18, 16);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(741, 99);
+            this.groupBox1.Size = new System.Drawing.Size(770, 220);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Navegador";
@@ -73,9 +76,9 @@ namespace Capa_VistaContabilidad
             this.Detalle.Controls.Add(this.label3);
             this.Detalle.Controls.Add(this.label2);
             this.Detalle.Controls.Add(this.label1);
-            this.Detalle.Location = new System.Drawing.Point(18, 121);
+            this.Detalle.Location = new System.Drawing.Point(18, 242);
             this.Detalle.Name = "Detalle";
-            this.Detalle.Size = new System.Drawing.Size(734, 366);
+            this.Detalle.Size = new System.Drawing.Size(770, 329);
             this.Detalle.TabIndex = 1;
             this.Detalle.TabStop = false;
             // 
@@ -238,17 +241,26 @@ namespace Capa_VistaContabilidad
             this.label1.TabIndex = 0;
             this.label1.Text = "Codigo";
             // 
+            // navegador1
+            // 
+            this.navegador1.Location = new System.Drawing.Point(10, 26);
+            this.navegador1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.navegador1.Name = "navegador1";
+            this.navegador1.Size = new System.Drawing.Size(759, 173);
+            this.navegador1.TabIndex = 0;
+            // 
             // MantenimientoTipodeCuentas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(247)))), ((int)(((byte)(253)))));
-            this.ClientSize = new System.Drawing.Size(800, 513);
+            this.ClientSize = new System.Drawing.Size(800, 618);
             this.Controls.Add(this.Detalle);
             this.Controls.Add(this.groupBox1);
             this.Name = "MantenimientoTipodeCuentas";
             this.Text = "MantenimientoTipodeCuentas";
             this.Load += new System.EventHandler(this.MantenimientoTipodeCuentas_Load);
+            this.groupBox1.ResumeLayout(false);
             this.Detalle.ResumeLayout(false);
             this.Detalle.PerformLayout();
             this.groupBox5.ResumeLayout(false);
@@ -280,5 +292,6 @@ namespace Capa_VistaContabilidad
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private NavegadorVista.Navegador navegador1;
     }
 }

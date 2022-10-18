@@ -38,6 +38,8 @@ namespace Capa_VistaContabilidad
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.navegador1 = new NavegadorVista.Navegador();
+            this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.SuspendLayout();
@@ -102,10 +104,11 @@ namespace Capa_VistaContabilidad
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.navegador1);
             this.groupBox1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(28, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(772, 162);
+            this.groupBox1.Size = new System.Drawing.Size(772, 197);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Navegador";
@@ -137,7 +140,15 @@ namespace Capa_VistaContabilidad
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Estatus";
             // 
-            // Form1
+            // navegador1
+            // 
+            this.navegador1.Location = new System.Drawing.Point(5, 17);
+            this.navegador1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.navegador1.Name = "navegador1";
+            this.navegador1.Size = new System.Drawing.Size(761, 180);
+            this.navegador1.TabIndex = 0;
+            // 
+            // MantenimientoClasesCuentas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -145,9 +156,10 @@ namespace Capa_VistaContabilidad
             this.ClientSize = new System.Drawing.Size(852, 491);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
-            this.Name = "Form1";
+            this.Name = "MantenimientoClasesCuentas";
             this.Text = "Mantenimiento Clase de Cuentas ";
             this.Load += new System.EventHandler(this.Form1_Load);
+            this.groupBox1.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.groupBox3.ResumeLayout(false);
@@ -166,6 +178,7 @@ namespace Capa_VistaContabilidad
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.GroupBox groupBox3;
+        private NavegadorVista.Navegador navegador1;
     }
 }
 
