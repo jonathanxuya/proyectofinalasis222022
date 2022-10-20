@@ -118,7 +118,7 @@ namespace Capa_VistaContabilidad
 
         private void btnClientes_Click(object sender, EventArgs e)
         {
-            Activos activos = new Activos();
+            MantenimientoActivos activos = new MantenimientoActivos();
             activos.MdiParent = this;
             activos.StartPosition = FormStartPosition.CenterScreen;
             activos.Show();
