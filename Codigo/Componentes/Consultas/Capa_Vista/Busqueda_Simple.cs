@@ -17,9 +17,7 @@ namespace Capa_VistaConsultas
     // Busqueda Simple Usuario 
     public partial class Busqueda_Simple : Form
     {
-        //Conexion cn = new Conexion();
-        OdbcConnection cn = new OdbcConnection("Dsn=Colchoneria2");
-
+        Capa_ControladorConsultas.csControldor csn = new Capa_ControladorConsultas.csControldor();
 
         public String tableN1 ="";
         String datobuscar = "";
@@ -30,18 +28,7 @@ namespace Capa_VistaConsultas
         {
             InitializeComponent();
             panelResultado.Visible = true;
-            /*tableN = label2.Text;*/
            
-           
-        }
-        public void CargarTablas()
-        {
-            /*
-            cn.Open();
-            cbo_buscaren.DataSource = cn.GetSchema("Tables");
-            cbo_buscaren.DisplayMember = "TABLE_NAME";
-            cn.Close();*/
-
         }
 
         private void btn_SalirBA_Click(object sender, EventArgs e)
@@ -49,45 +36,21 @@ namespace Capa_VistaConsultas
             this.Close();
         }
 
-        private void bnt_nuevaBA_Click(object sender, EventArgs e)
-        {
-            /*panelResultado.Visible = false;
-            btn_BuscarBA.Enabled = true;
-            cbox_columnas.Items.Clear();*/
-        }
-
         private void btn_CancelarBA_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
-        public void btn_BuscarBA_Click(object sender, EventArgs e)
-        {
-            /*tableN = cbo_buscaren.Text;
-            BuscarT(tableN);*/
-        }
-
         public void BuscarT()
         {
             string tableN = tableN1;
-                DataTable dt = new DataTable();
-                try
-                {
-                    string cadena = " SELECT  * FROM " + tableN;
-                    OdbcDataAdapter datos = new OdbcDataAdapter(cadena, cn);
-                    datos.Fill(dt);
-
-                    if (dt.Rows.Count > 0)
-                    {
-                        panelResultado.Visible = true;
-                        dgvDato.DataSource = dt;
-                    }
-                }
-                catch
-                {
-                    String textalert = " Error al consultar Tabla ";
-                    MessageBox.Show(textalert);
-                }
+            DataTable dt = new DataTable();
+            csn.BuscarBA(tableN, dt);
+            if (dt.Rows.Count > 0)
+            {
+                panelResultado.Visible = true;
+                dgvDato.DataSource = dt;
+            }
         }
 
         private void Busqueda_Avanzada_Load(object sender, EventArgs e)
@@ -102,7 +65,6 @@ namespace Capa_VistaConsultas
 
         private void panelResultado_Paint(object sender, PaintEventArgs e)
         {
-           /* btn_BuscarBA.Enabled = false;*/
             CargarColumnas(cbox_columnas , tableN1);
         }
 
@@ -137,50 +99,18 @@ namespace Capa_VistaConsultas
 
         private void BuscaPor(string datobuscar, string buscaren, string tableN)
         {
+            DataTable dt = new DataTable();
+            csn.BuscarPor(datobuscar, buscaren, tableN, dt, lbl_cadena);
 
-            if (string.IsNullOrEmpty(datobuscar))
+            if (dt.Rows.Count > 0)
             {
-                String textalert = " El campo buscar, se encuentra vacio ";
-                MessageBox.Show(textalert);
+                panelResultado.Visible = true;
+                dgvDato.DataSource = dt;
+                cadenaB = "";
+                datobuscar = "";
+                buscaren = "";
+                txt_BuscaPor.Text = "";
             }
-            else
-            {
-                try
-                {
-                    DataTable dt = new DataTable();
-                    cadenaB = "";
-                    cn.Open();
-                    cadenaB = " SELECT * FROM " + tableN + " WHERE " + buscaren + " LIKE ('%" + datobuscar.Trim() +"%')";
-                    lbl_cadena.Text = "Buscando : " + datobuscar + " En Columna : " + buscaren;
-                    OdbcDataAdapter datos = new OdbcDataAdapter(cadenaB, cn);
-                    datos.Fill(dt);
-                    OdbcCommand comando = new OdbcCommand(cadenaB, cn);
-                    OdbcDataReader leer;
-                    leer = comando.ExecuteReader();
-
-
-                    if (dt.Rows.Count > 0)
-                    {
-                        panelResultado.Visible = true;
-                        dgvDato.DataSource = dt;
-                        cadenaB = "";
-                        datobuscar = "";
-                        buscaren = "";
-                        txt_BuscaPor.Text= "";
-                    }
-                }
-                catch
-                {
-                    String textalert = " El dato : " + datobuscar + " No se encuentra en la Columna : " + buscaren;
-                    MessageBox.Show(textalert);
-
-                    cn.Close();
-                }
-            }
-            cadenaB = "";
-            datobuscar = "";
-            buscaren = "";
-            txt_BuscaPor.Text = "";
         }
 
         private void dgvDato_CellContentClick(object sender, DataGridViewCellEventArgs e)

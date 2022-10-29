@@ -18,8 +18,8 @@ namespace EjecucionConsultaInteligente
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-           // Application.Run(new Capa_VistaConsultas.Busqueda());
-            Application.Run(new Capa_VistaConsultas.Busqueda_Avanzada());
+          //  Application.Run(new Capa_VistaConsultas.Busqueda());
+            Application.Run(new Capa_VistaConsultas.Busqueda());
         }
     }
 }
