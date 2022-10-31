@@ -27,9 +27,8 @@ namespace Capa_VistaContabilidad
 
         private void navegador1_Load(object sender, EventArgs e)
         {
-            NavegadorVista.Navegador.idApp = "8004";
-            TextBox[] Grupotextbox = { txtID,textNombreTipoCuenta
-                    ,textSerieTipoCuenta,textStatus};
+            NavegadorVista.Navegador.idApp = "8003";
+            TextBox[] Grupotextbox = { txtID,textNombreTipoCuenta,textSerieTipoCuenta,textStatus};
             TextBox[] Idtextbox = { txtID };
             navegador1.textbox = Grupotextbox;
             navegador1.tabla = dgvTipoCuenta;
