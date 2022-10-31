@@ -23,7 +23,14 @@ namespace Capa_VistaContabilidad
 
         private void navegador1_Load(object sender, EventArgs e)
         {
-
+            //NavegadorVista.Navegador.idApp = "8004";
+            //TextBox[] Grupotextbox = { txtID, textNombreTipoCuenta, textSerieTipoCuenta, textStatus };
+            //TextBox[] Idtextbox = { txtID };
+            //navegador1.textbox = Grupotextbox;
+            //navegador1.tabla = dgvTipoCuenta;
+            //navegador1.textboxi = Idtextbox;
+            //navegador1.actual = this;
+            //navegador1.cargar(dgvTipoCuenta, Grupotextbox, "Colchoneria");
         }
     }
 }

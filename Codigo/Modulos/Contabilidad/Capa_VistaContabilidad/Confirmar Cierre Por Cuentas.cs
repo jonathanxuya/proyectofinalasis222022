@@ -12,6 +12,7 @@ namespace Capa_VistaContabilidad
 {
     public partial class CierreXCtaConf : Form
     {
+        Capa_ControladorContabilidad.controlador cn = new Capa_ControladorContabilidad.controlador();
         public CierreXCtaConf()
         {
             InitializeComponent();
@@ -44,14 +45,21 @@ namespace Capa_VistaContabilidad
 
         private void bnt_savectas_Click(object sender, EventArgs e)
         {
-            //float totp, totac;
-            //string cod, name, fec;
+            float totp, totac;
+            string cod, name, fec, cuenta;
 
-            //totp = float.Parse(txt_totpas.Text);
-            //totac = float.Parse(txt_totact.Text);
-            //cod = txt_codcont.Text;
-            //name = txt_namecont.Text;
-            //fec = txt_dateclose.Text;
+            cuenta = lbl_namecta.Text;
+            totp = float.Parse(txt_totpas.Text);
+            totac = float.Parse(txt_totact.Text);
+            cod = txt_codcont.Text;
+            name = txt_namecont.Text;
+            fec = txt_dateclose.Text;
+
+            bool resultado = cn.confcierre(null, cuenta, totp, totac, cod, name, fec);
+            if (resultado)
+            {
+                String confirmacion = "Cierre De Cuenta : " + cuenta + " Cerrado Exitosamente ";
+            }
         }
     }
 }
