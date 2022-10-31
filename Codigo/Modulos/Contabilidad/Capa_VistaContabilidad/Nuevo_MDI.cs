@@ -204,11 +204,11 @@ namespace Capa_VistaContabilidad
 
         private void btnProveedores_Click(object sender, EventArgs e)
         {
-            Presupuesto presp = new Presupuesto();
-            presp.MdiParent = this;
-            presp.StartPosition = FormStartPosition.CenterScreen;
-            presp.Show();
-            hideSubMenu();
+            //Presupuesto presp = new Presupuesto();
+            //presp.MdiParent = this;
+            //presp.StartPosition = FormStartPosition.CenterScreen;
+            //presp.Show();
+            //hideSubMenu();
         }
 
         private void btnContactosProveedores_Click(object sender, EventArgs e)
