@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Capa_ModeloConsultas;
 using System.Data.Odbc;
 using System.Data;
+using System.Windows.Forms;
 
 namespace Capa_ControladorConsultas 
 {
@@ -31,6 +32,8 @@ namespace Capa_ControladorConsultas
             dt.Fill(table);
             return table;
         }
+
+
         public void ejecutarconsulta(string condicion)
         {
             string sql = "DELETE FROM tbl_consultainteligente where nombre_consulta = " + '"' + condicion + '"' + ";";
@@ -44,6 +47,24 @@ namespace Capa_ControladorConsultas
                 " tbl_consultainteligente set tabla ='" + tabla_consulta + "'" + "'campos ='"+ campos_consulta + "'alias ='" + alias_consulta + "where nombre = '" + nombre_consulta + "'";
             Console.WriteLine(sql);
             sn.insertarconsulta(sql);
+        }
+
+        //Josue Amaya
+        public DataTable BuscarBA(string tableN, DataTable dt)
+        {
+            OdbcConnection con = new OdbcConnection("Dsn=Colchoneria");
+            try
+            {
+                con.Open();
+                string cadena = " SELECT  * FROM " + tableN;
+                OdbcDataAdapter datos = new OdbcDataAdapter(cadena, con);
+                datos.Fill(dt);
+            }
+            catch
+            {
+            }
+            con.Close();
+            return dt;
         }
 
         public void editarconsulta1(string operador_consulta, string campos_consultas, string valor_consultas, string PkId)
@@ -83,7 +104,7 @@ namespace Capa_ControladorConsultas
 
                 #region Query
                 String query = @"INSERT INTO tbl_consultainteligente
-                (nombre_consulta,tabla_consulta,campos_consultas,alias_consultas, cadena_consultas, Pk_Id) VALUE(?,?,?,?,?,?);";
+                (nombre_consulta,tabla_consulta,campos_consultas,alias_consultas,cadena_consultas,  Pk_Id) VALUE(?,?,?,?,?,?);";
                 #endregion
                 cmd.CommandType = CommandType.Text;
                 cmd.CommandText = query;
@@ -101,6 +122,43 @@ namespace Capa_ControladorConsultas
             }
             return true;
         }
+
+        //Josue Amaya
+        public DataTable BuscarPor(string datobuscar, string buscaren, string tableN, DataTable dt, Label lbl_cadena)
+        {
+            OdbcConnection con = new OdbcConnection("Dsn=Colchoneria");
+            if (string.IsNullOrEmpty(datobuscar))
+            {
+                String textalert = " El campo buscar, se encuentra vacio ";
+                MessageBox.Show(textalert);
+            }
+            else
+            {
+                try
+                {
+
+                    String cadenaB = "";
+                    con.Open();
+                    cadenaB = " SELECT * FROM " + tableN + " WHERE " + buscaren + " LIKE ('%" + datobuscar.Trim() + "%')";
+                    lbl_cadena.Text = "Buscando : " + datobuscar + " En Columna : " + buscaren;
+                    OdbcDataAdapter datos = new OdbcDataAdapter(cadenaB, con);
+                    datos.Fill(dt);
+                    OdbcCommand comando = new OdbcCommand(cadenaB, con);
+                    OdbcDataReader leer;
+                    leer = comando.ExecuteReader();
+
+                }
+                catch
+                {
+                    String textalert = " El dato : " + datobuscar + " No se encuentra en la Columna : " + buscaren;
+                    MessageBox.Show(textalert);
+                }
+
+                con.Close();
+            }
+            return dt;
+        }
+
         public bool InsertBusquedaCompleja(string _ope, string _camp, string _valo, string _IDE)
         {
 
@@ -171,6 +229,8 @@ namespace Capa_ControladorConsultas
             }
             return (dt2);
         }
+
+        
 
     }
 }

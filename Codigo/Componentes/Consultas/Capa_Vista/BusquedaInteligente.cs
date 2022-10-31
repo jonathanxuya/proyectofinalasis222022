@@ -26,6 +26,14 @@ namespace Capa_VistaConsultas
             CargarTablas(cboTabla);
             CargarTablas(cboTablaConsultaSimple);
 
+            panel13.Enabled = false;
+            panel15.Enabled = false;
+            // groupBox3.Enabled = false;
+            groupBox6.Enabled = false;
+            groupBox4.Enabled = false;
+            groupBox5.Enabled = false;
+
+
         }
         string consulta = "";
 
@@ -55,7 +63,7 @@ namespace Capa_VistaConsultas
                 MessageBox.Show("Datos guardados");
             }
 
-            textBox1.Text = (txtNombreConsulta.Text + "+" + cboTabla.Text + "+" + comboBox11.Text + "+" + textBox11.Text + "+"+ textBox8.Text);
+            textBox1.Text = (txtNombreConsulta.Text + "+" + cboTabla.Text + "+" + comboBox11.Text + "+" + textBox11.Text + "+");
             string columnasbd = comboBox11.Text;
             //CargarColumnas(columnasbd, comboBox11);
         }
@@ -307,6 +315,7 @@ namespace Capa_VistaConsultas
                 groupBox5.Enabled = false;
                 groupBox6.Enabled = false;
             }
+
         }
 
 
@@ -315,7 +324,7 @@ namespace Capa_VistaConsultas
             // Diana Victores 9959-19-1471
             //boton agregar de Editar
             Capa_ControladorConsultas.csControldor crud = new Capa_ControladorConsultas.csControldor();
-            bool resultado = crud.InsertBusqueda(txtcamposelectoseditar.Text, cboTablaConsultaSimple.Text, cboCamposEDITAR.Text, txtNombreAlias.Text, txtCadenaGeneradaEDITAR.Text, null);
+            bool resultado = crud.InsertBusqueda(txtcamposelectoseditar.Text, cboTablaConsultaSimple.Text, cboCamposEDITAR.Text, txtNombreAlias.Text, txtCadenaGeneradaEDITAR.Text,  null);
 
             if (resultado)
 
@@ -323,7 +332,7 @@ namespace Capa_VistaConsultas
                 MessageBox.Show("Datos guardados");
             }
 
-            txtTablaConsulta.Text = (txtcamposelectoseditar.Text + "+" + cboTablaConsultaSimple.Text + "+" + cboCamposEDITAR.Text + "+" + txtNombreAlias.Text +"+"+ txtCadenaGeneradaEDITAR.Text);
+            txtTablaConsulta.Text = (txtcamposelectoseditar.Text + "+" + cboTablaConsultaSimple.Text + "+" + cboCamposEDITAR.Text + "+" + txtNombreAlias.Text +"+" + txtCadenaGeneradaEDITAR.Text + "+");
             string columnasbd = comboBox11.Text;
             //CargarColumnas(columnasbd, comboBox11);
         }
@@ -420,7 +429,7 @@ namespace Capa_VistaConsultas
             {
                 panel15.Enabled = false;
                 panel13.Enabled = false;
-                checkBox3.Checked = false;
+                //checkBox3.Checked = false;
 
             }
 
