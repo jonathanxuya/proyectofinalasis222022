@@ -21,7 +21,7 @@ namespace Capa_VistaContabilidad
             btn_mantEnbCtas, btn_manTctas, btn_mantPolizaD, btn_MantTipoPol, btn_MantDetPol, bnt_MantActF, btn_MantTEFinanc};
             cnc.deshabilitarApps(apps);
             //mante clases
-            cnc.getAccesoApp (8002,apps[0]);
+            cnc.getAccesoApp(8002, apps[0]);
             //Mantenimiento Encabezado Cuentas
             cnc.getAccesoApp(8003, apps[1]);
             //Mantenimiento tipo cuenta
@@ -35,7 +35,7 @@ namespace Capa_VistaContabilidad
             // Mantenimiento Activos Fijos
             cnc.getAccesoApp(8008, apps[6]);
             // Mantenimiento Estados Financieros
-            
+
             // ----------- Procesos ---------
 
             cnc.getAccesoApp(8030, apps[7]);
