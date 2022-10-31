@@ -176,11 +176,11 @@
     <Compile Include="Nuevo_MDI.designer.cs">
       <DependentUpon>Nuevo_MDI.cs</DependentUpon>
     </Compile>
-    <Compile Include="Presupuesto.cs">
+    <Compile Include="ProcesoPresupuesto.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Presupuesto.designer.cs">
-      <DependentUpon>Presupuesto.cs</DependentUpon>
+    <Compile Include="ProcesoPresupuesto.Designer.cs">
+      <DependentUpon>ProcesoPresupuesto.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -224,8 +224,8 @@
     <EmbeddedResource Include="Nuevo_MDI.resx">
       <DependentUpon>Nuevo_MDI.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Presupuesto.resx">
-      <DependentUpon>Presupuesto.cs</DependentUpon>
+    <EmbeddedResource Include="ProcesoPresupuesto.resx">
+      <DependentUpon>ProcesoPresupuesto.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
