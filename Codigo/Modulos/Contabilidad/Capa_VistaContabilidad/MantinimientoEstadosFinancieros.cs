@@ -10,6 +10,7 @@ using System.Windows.Forms;
 
 namespace Capa_VistaContabilidad
 {
+    //Jonathan Xuyá
     
     public partial class MantinimientoEstadosFinancieros : Form
     {
