@@ -1,16 +1,17 @@
-﻿namespace Capa_VistaContabilidad
+﻿
+namespace Capa_VistaContabilidad
 {
-    partial class MantenimientoActivos
+    partial class MantinimientoEstadosFinancieros
     {
         /// <summary>
-        /// Variable del diseñador necesaria.
+        /// Required designer variable.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
 
         /// <summary>
-        /// Limpiar los recursos que se estén usando.
+        /// Clean up any resources being used.
         /// </summary>
-        /// <param name="disposing">true si los recursos administrados se deben desechar; false en caso contrario.</param>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -20,14 +21,17 @@
             base.Dispose(disposing);
         }
 
-        #region Código generado por el Diseñador de Windows Forms
+        #region Windows Form Designer generated code
 
         /// <summary>
-        /// Método necesario para admitir el Diseñador. No se puede modificar
-        /// el contenido de este método con el editor de código.
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent()
         {
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.navegador1 = new NavegadorVista.Navegador();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btn_actualizar = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
@@ -49,20 +53,58 @@
             this.label2 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.navegador1 = new NavegadorVista.Navegador();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Edificaciones = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Muebles = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Equipos = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Maquinaria = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Herramientas = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.EquipoComputo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.panel1.SuspendLayout();
+            this.ActivoCirculante = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ActivoNoCirculante = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PasivoACortoPlazo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PasivoALargoPlazo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CapitalContable = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ResultadoAPeriodo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.navegador1);
+            this.panel2.Controls.Add(this.dataGridView1);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel2.Location = new System.Drawing.Point(260, 0);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1112, 898);
+            this.panel2.TabIndex = 3;
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
+            // 
+            // navegador1
+            // 
+            this.navegador1.Location = new System.Drawing.Point(118, 29);
+            this.navegador1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.navegador1.Name = "navegador1";
+            this.navegador1.Size = new System.Drawing.Size(774, 197);
+            this.navegador1.TabIndex = 1;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Codigo,
+            this.ActivoCirculante,
+            this.ActivoNoCirculante,
+            this.PasivoACortoPlazo,
+            this.PasivoALargoPlazo,
+            this.CapitalContable,
+            this.ResultadoAPeriodo});
+            this.dataGridView1.Location = new System.Drawing.Point(4, 313);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.Size = new System.Drawing.Size(1105, 279);
+            this.dataGridView1.TabIndex = 0;
             // 
             // panel1
             // 
@@ -90,8 +132,8 @@
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(260, 588);
-            this.panel1.TabIndex = 0;
+            this.panel1.Size = new System.Drawing.Size(260, 898);
+            this.panel1.TabIndex = 2;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // btn_actualizar
@@ -145,7 +187,6 @@
             this.textBox7.Name = "textBox7";
             this.textBox7.Size = new System.Drawing.Size(227, 22);
             this.textBox7.TabIndex = 15;
-            this.textBox7.TextChanged += new System.EventHandler(this.textBox7_TextChanged);
             // 
             // label7
             // 
@@ -156,7 +197,6 @@
             this.label7.Size = new System.Drawing.Size(56, 17);
             this.label7.TabIndex = 14;
             this.label7.Text = "Codigo:";
-            this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // textBox4
             // 
@@ -165,7 +205,6 @@
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(227, 22);
             this.textBox4.TabIndex = 13;
-            this.textBox4.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
             // 
             // label4
             // 
@@ -173,10 +212,9 @@
             this.label4.Location = new System.Drawing.Point(16, 348);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(112, 17);
+            this.label4.Size = new System.Drawing.Size(144, 17);
             this.label4.TabIndex = 12;
-            this.label4.Text = "EquipoComputo:";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
+            this.label4.Text = "Resultado de periodo";
             // 
             // textBox5
             // 
@@ -185,7 +223,6 @@
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(227, 22);
             this.textBox5.TabIndex = 11;
-            this.textBox5.TextChanged += new System.EventHandler(this.textBox5_TextChanged);
             // 
             // label5
             // 
@@ -193,10 +230,9 @@
             this.label5.Location = new System.Drawing.Point(16, 292);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(97, 17);
+            this.label5.Size = new System.Drawing.Size(111, 17);
             this.label5.TabIndex = 10;
-            this.label5.Text = "Herramientas:";
-            this.label5.Click += new System.EventHandler(this.label5_Click);
+            this.label5.Text = "Capital Contable";
             // 
             // textBox6
             // 
@@ -205,7 +241,6 @@
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(227, 22);
             this.textBox6.TabIndex = 9;
-            this.textBox6.TextChanged += new System.EventHandler(this.textBox6_TextChanged);
             // 
             // label6
             // 
@@ -213,10 +248,9 @@
             this.label6.Location = new System.Drawing.Point(16, 238);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(82, 17);
+            this.label6.Size = new System.Drawing.Size(136, 17);
             this.label6.TabIndex = 8;
-            this.label6.Text = "Maquinaria:";
-            this.label6.Click += new System.EventHandler(this.label6_Click);
+            this.label6.Text = "Pasivo a largo plazo";
             // 
             // button2
             // 
@@ -247,7 +281,6 @@
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(227, 22);
             this.textBox3.TabIndex = 5;
-            this.textBox3.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             // 
             // label3
             // 
@@ -255,10 +288,9 @@
             this.label3.Location = new System.Drawing.Point(13, 185);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(63, 17);
+            this.label3.Size = new System.Drawing.Size(136, 17);
             this.label3.TabIndex = 4;
-            this.label3.Text = "Equipos:";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
+            this.label3.Text = "Pasivo a corto plazo";
             // 
             // textBox2
             // 
@@ -267,7 +299,6 @@
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(227, 22);
             this.textBox2.TabIndex = 3;
-            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // label2
             // 
@@ -275,10 +306,9 @@
             this.label2.Location = new System.Drawing.Point(13, 129);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(65, 17);
+            this.label2.Size = new System.Drawing.Size(131, 17);
             this.label2.TabIndex = 2;
-            this.label2.Text = "Muebles:";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
+            this.label2.Text = "Activo no circulante";
             // 
             // textBox1
             // 
@@ -287,7 +317,6 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(227, 22);
             this.textBox1.TabIndex = 1;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // label1
             // 
@@ -295,132 +324,109 @@
             this.label1.Location = new System.Drawing.Point(13, 75);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(95, 17);
+            this.label1.Size = new System.Drawing.Size(111, 17);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Edificaciones:";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
-            // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.navegador1);
-            this.panel2.Controls.Add(this.dataGridView1);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel2.Location = new System.Drawing.Point(260, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1112, 588);
-            this.panel2.TabIndex = 1;
-            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
-            // 
-            // navegador1
-            // 
-            this.navegador1.Location = new System.Drawing.Point(118, 29);
-            this.navegador1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.navegador1.Name = "navegador1";
-            this.navegador1.Size = new System.Drawing.Size(774, 197);
-            this.navegador1.TabIndex = 1;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Codigo,
-            this.Edificaciones,
-            this.Muebles,
-            this.Equipos,
-            this.Maquinaria,
-            this.Herramientas,
-            this.EquipoComputo});
-            this.dataGridView1.Location = new System.Drawing.Point(4, 313);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.Size = new System.Drawing.Size(1105, 279);
-            this.dataGridView1.TabIndex = 0;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.label1.Text = "Activo circulante";
             // 
             // Codigo
             // 
-            this.Codigo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.Codigo.HeaderText = "Codigo";
             this.Codigo.MinimumWidth = 6;
             this.Codigo.Name = "Codigo";
             this.Codigo.ReadOnly = true;
+            this.Codigo.Width = 125;
             // 
-            // Edificaciones
+            // ActivoCirculante
             // 
-            this.Edificaciones.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Edificaciones.HeaderText = "Edificaciones";
-            this.Edificaciones.MinimumWidth = 6;
-            this.Edificaciones.Name = "Edificaciones";
-            this.Edificaciones.ReadOnly = true;
+            this.ActivoCirculante.HeaderText = "ActivoCirculante";
+            this.ActivoCirculante.MinimumWidth = 6;
+            this.ActivoCirculante.Name = "ActivoCirculante";
+            this.ActivoCirculante.ReadOnly = true;
+            this.ActivoCirculante.Width = 125;
             // 
-            // Muebles
+            // ActivoNoCirculante
             // 
-            this.Muebles.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Muebles.HeaderText = "Muebles";
-            this.Muebles.MinimumWidth = 6;
-            this.Muebles.Name = "Muebles";
-            this.Muebles.ReadOnly = true;
+            this.ActivoNoCirculante.HeaderText = "ActivoNoCirculante";
+            this.ActivoNoCirculante.MinimumWidth = 6;
+            this.ActivoNoCirculante.Name = "ActivoNoCirculante";
+            this.ActivoNoCirculante.ReadOnly = true;
+            this.ActivoNoCirculante.Width = 125;
             // 
-            // Equipos
+            // PasivoACortoPlazo
             // 
-            this.Equipos.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Equipos.HeaderText = "Equipos";
-            this.Equipos.MinimumWidth = 6;
-            this.Equipos.Name = "Equipos";
-            this.Equipos.ReadOnly = true;
+            this.PasivoACortoPlazo.HeaderText = "PasivoACortoPlazo";
+            this.PasivoACortoPlazo.MinimumWidth = 6;
+            this.PasivoACortoPlazo.Name = "PasivoACortoPlazo";
+            this.PasivoACortoPlazo.ReadOnly = true;
+            this.PasivoACortoPlazo.Width = 125;
             // 
-            // Maquinaria
+            // PasivoALargoPlazo
             // 
-            this.Maquinaria.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Maquinaria.HeaderText = "Maquinaria";
-            this.Maquinaria.MinimumWidth = 6;
-            this.Maquinaria.Name = "Maquinaria";
-            this.Maquinaria.ReadOnly = true;
+            this.PasivoALargoPlazo.HeaderText = "PasivoALargoPlazo";
+            this.PasivoALargoPlazo.MinimumWidth = 6;
+            this.PasivoALargoPlazo.Name = "PasivoALargoPlazo";
+            this.PasivoALargoPlazo.ReadOnly = true;
+            this.PasivoALargoPlazo.Width = 125;
             // 
-            // Herramientas
+            // CapitalContable
             // 
-            this.Herramientas.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Herramientas.HeaderText = "Herramientas";
-            this.Herramientas.MinimumWidth = 6;
-            this.Herramientas.Name = "Herramientas";
-            this.Herramientas.ReadOnly = true;
+            this.CapitalContable.HeaderText = "CapitalContable";
+            this.CapitalContable.MinimumWidth = 6;
+            this.CapitalContable.Name = "CapitalContable";
+            this.CapitalContable.ReadOnly = true;
+            this.CapitalContable.Width = 125;
             // 
-            // EquipoComputo
+            // ResultadoAPeriodo
             // 
-            this.EquipoComputo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.EquipoComputo.HeaderText = "EquipoComputo";
-            this.EquipoComputo.MinimumWidth = 6;
-            this.EquipoComputo.Name = "EquipoComputo";
-            this.EquipoComputo.ReadOnly = true;
+            this.ResultadoAPeriodo.HeaderText = "ResultadoAPeriodo";
+            this.ResultadoAPeriodo.MinimumWidth = 6;
+            this.ResultadoAPeriodo.Name = "ResultadoAPeriodo";
+            this.ResultadoAPeriodo.ReadOnly = true;
+            this.ResultadoAPeriodo.Width = 125;
             // 
-            // MantenimientoActivos
+            // MantinimientoEstadosFinancieros
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1371, 588);
+            this.ClientSize = new System.Drawing.Size(1840, 898);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(4);
-            this.Name = "MantenimientoActivos";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Name = "MantinimientoEstadosFinancieros";
             this.Text = "Form1";
-            this.Load += new System.EventHandler(this.Form1_Load);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
+        private System.Windows.Forms.Panel panel2;
+        private NavegadorVista.Navegador navegador1;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Codigo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ActivoCirculante;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ActivoNoCirculante;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PasivoACortoPlazo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PasivoALargoPlazo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CapitalContable;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ResultadoAPeriodo;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button btn_actualizar;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Label label3;
@@ -428,29 +434,5 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Codigo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Edificaciones;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Muebles;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Equipos;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Maquinaria;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Herramientas;
-        private System.Windows.Forms.DataGridViewTextBoxColumn EquipoComputo;
-        private System.Windows.Forms.Button btn_actualizar;
-        private NavegadorVista.Navegador navegador1;
     }
 }
-
