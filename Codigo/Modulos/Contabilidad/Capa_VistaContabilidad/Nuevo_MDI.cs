@@ -260,7 +260,7 @@ namespace Capa_VistaContabilidad
 
         private void btnFactura_Click(object sender, EventArgs e)
         {
-            EstadosFinancieros efinancieros = new EstadosFinancieros();
+            MantinimientoEstadosFinancieros efinancieros = new MantinimientoEstadosFinancieros();
             efinancieros.MdiParent = this;
             efinancieros.StartPosition = FormStartPosition.CenterScreen;
             efinancieros.Show();
@@ -421,6 +421,16 @@ namespace Capa_VistaContabilidad
         private void button2_Click_2(object sender, EventArgs e)
         {
             DetallePoliza mantclas = new DetallePoliza();
+
+            mantclas.MdiParent = this;
+            mantclas.StartPosition = FormStartPosition.CenterScreen;
+            mantclas.Show();
+            hideSubMenu();
+        }
+
+        private void button2_Click_3(object sender, EventArgs e)
+        {
+            MantenimientoActivos mantclas = new MantenimientoActivos();
 
             mantclas.MdiParent = this;
             mantclas.StartPosition = FormStartPosition.CenterScreen;

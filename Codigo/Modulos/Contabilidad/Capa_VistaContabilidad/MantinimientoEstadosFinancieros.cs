@@ -2,74 +2,53 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
-using System.Data.Odbc;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-
-
 namespace Capa_VistaContabilidad
 {
-    public partial class MantenimientoActivos : Form
+    //Jonathan Xuyá
+    
+    public partial class MantinimientoEstadosFinancieros : Form
     {
-        public MantenimientoActivos()
+        public MantinimientoEstadosFinancieros()
         {
             InitializeComponent();
         }
 
-
         Capa_ControladorContabilidad.controlador crud = new Capa_ControladorContabilidad.controlador();
-        private void Form1_Load(object sender, EventArgs e)
-        {
-            DataTable dt = crud.SelectProducto();
-            foreach (DataRow item in dt.Rows)
-            {
-                dataGridView1.Rows.Add(new object[] { item[0].ToString(), item[1].ToString(), item[2].ToString(), item[3].ToString(), item[4].ToString(), item[5].ToString() , item[6].ToString()});
-            }
-        }
-
         private void button1_Click(object sender, EventArgs e)
         {
-            bool resultado = crud.InsertProducto(textBox7.Text, textBox1.Text, textBox2.Text, textBox3.Text, textBox6.Text, textBox5.Text, textBox4.Text);
+            bool resultado = crud.InsertEstado(textBox7.Text, textBox1.Text, textBox2.Text, textBox3.Text, textBox6.Text, textBox5.Text, textBox4.Text);
             if (resultado)
             {
-                dataGridView1.Rows.Add(new object[]{textBox7.Text, textBox1.Text, textBox2.Text, textBox3.Text, textBox6.Text, textBox5.Text, textBox4.Text});
+                dataGridView1.Rows.Add(new object[] { textBox7.Text, textBox1.Text, textBox2.Text, textBox3.Text, textBox6.Text, textBox5.Text, textBox4.Text });
             }
-        }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-           
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            bool resultado = crud.UpdateProducto(textBox7.Text, textBox1.Text, textBox2.Text, textBox3.Text, textBox6.Text, textBox5.Text, textBox4.Text);
+            bool resultado = crud.UpdateEstado(textBox7.Text, textBox1.Text, textBox2.Text, textBox3.Text, textBox6.Text, textBox5.Text, textBox4.Text);
             if (resultado)
             {
-                dataGridView1.Rows.Add(new object[]{textBox7.Text,textBox1.Text, textBox2.Text, textBox3.Text, textBox6.Text, textBox5.Text, textBox4.Text});
+                dataGridView1.Rows.Add(new object[] { textBox7.Text, textBox1.Text, textBox2.Text, textBox3.Text, textBox6.Text, textBox5.Text, textBox4.Text });
             }
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            bool resultado = crud.DeleteProducto(textBox7.Text);
+            bool resultado = crud.DeleteEstado(textBox7.Text);
             if (resultado)
             {
-                dataGridView1.Rows.Add(new object[]{textBox7.Text});
+                dataGridView1.Rows.Add(new object[] { textBox7.Text });
             }
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
-            /*  bool resultado = crud.SelectProducto(dataGridView1.Rows);
-              if (resultado)
-              {
-                  dataGridView1.Rows.Add(new object[]{textBox7.Text, textBox1.Text, textBox2.Text, textBox3.Text, textBox6.Text, textBox5.Text, textBox4.Text});
-              }*/
             String col = "";
             String data = "";
             if (string.IsNullOrEmpty(textBox7.Text))
@@ -124,7 +103,7 @@ namespace Capa_VistaContabilidad
                     data = textBox1.Text;
                     col = "Edificaciones";
                 }
-            } 
+            }
             else
             {
                 data = textBox7.Text;
@@ -134,9 +113,6 @@ namespace Capa_VistaContabilidad
             //crud.BuscarProducto(data, col, dt);
             crud.BuscarDato(data, col, dt);
             dataGridView1.DataSource = dt;
-
-
-
         }
 
         private void button5_Click(object sender, EventArgs e)
@@ -154,87 +130,17 @@ namespace Capa_VistaContabilidad
         {
             String table = "";
             DataTable dt = new DataTable();
-            table = "tbl_activosfijos";
-            crud.ActualizarT(table,dt);
+            table = "tbl_EstadosFinancieros";
+            crud.ActualizarE(table, dt);
             dataGridView1.DataSource = dt;
         }
 
-        private void panel2_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void textBox7_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label7_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox4_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox5_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox6_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label6_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox3_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
         {
 
         }
