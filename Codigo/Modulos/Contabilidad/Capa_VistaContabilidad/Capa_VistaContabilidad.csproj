@@ -38,6 +38,9 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\Capa_ControladorContabilidad\bin\Debug\Capa_ControladorContabilidad.dll</HintPath>
     </Reference>
+    <Reference Include="Capa_VistaConsultas">
+      <HintPath>..\..\..\Componentes\Consultas\Capa_Vista\bin\Debug\Capa_VistaConsultas.dll</HintPath>
+    </Reference>
     <Reference Include="FontAwesome.Sharp, Version=6.1.1.0, Culture=neutral, PublicKeyToken=d16d1e4e568ec10f, processorArchitecture=MSIL">
       <HintPath>..\packages\FontAwesome.Sharp.6.1.1\lib\net472\FontAwesome.Sharp.dll</HintPath>
     </Reference>
@@ -170,23 +173,17 @@
     <Compile Include="MantenimientoTipoPoliza.Designer.cs">
       <DependentUpon>MantenimientoTipoPoliza.cs</DependentUpon>
     </Compile>
-    <Compile Include="MantinimientoEstadosFinancieros.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="MantinimientoEstadosFinancieros.designer.cs">
-      <DependentUpon>MantinimientoEstadosFinancieros.cs</DependentUpon>
-    </Compile>
     <Compile Include="Nuevo_MDI.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Nuevo_MDI.designer.cs">
       <DependentUpon>Nuevo_MDI.cs</DependentUpon>
     </Compile>
-    <Compile Include="ProcesoPresupuesto.cs">
+    <Compile Include="Presupuesto.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ProcesoPresupuesto.Designer.cs">
-      <DependentUpon>ProcesoPresupuesto.cs</DependentUpon>
+    <Compile Include="Presupuesto.designer.cs">
+      <DependentUpon>Presupuesto.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -227,14 +224,11 @@
     <EmbeddedResource Include="MantenimientoTipoPoliza.resx">
       <DependentUpon>MantenimientoTipoPoliza.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MantinimientoEstadosFinancieros.resx">
-      <DependentUpon>MantinimientoEstadosFinancieros.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Nuevo_MDI.resx">
       <DependentUpon>Nuevo_MDI.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ProcesoPresupuesto.resx">
-      <DependentUpon>ProcesoPresupuesto.cs</DependentUpon>
+    <EmbeddedResource Include="Presupuesto.resx">
+      <DependentUpon>Presupuesto.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

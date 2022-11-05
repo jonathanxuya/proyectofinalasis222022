@@ -154,6 +154,7 @@ namespace Capa_VistaContabilidad
             this.dgvClaseCuentaEncabezado.Name = "dgvClaseCuentaEncabezado";
             this.dgvClaseCuentaEncabezado.Size = new System.Drawing.Size(737, 194);
             this.dgvClaseCuentaEncabezado.TabIndex = 0;
+            this.dgvClaseCuentaEncabezado.Tag = "tbl_encabezadoclasecuenta";
             // 
             // MantenimientoEncabezadoCuentas
             // 

@@ -165,6 +165,7 @@ namespace Capa_VistaContabilidad
             this.dgvTipoCuenta.Name = "dgvTipoCuenta";
             this.dgvTipoCuenta.Size = new System.Drawing.Size(648, 148);
             this.dgvTipoCuenta.TabIndex = 27;
+            this.dgvTipoCuenta.Tag = "tbl_tipocuenta";
             // 
             // groupBox3
             // 
