@@ -21,7 +21,7 @@ namespace Capa_VistaContabilidad
             btn_mantEnbCtas, btn_manTctas, btn_mantPolizaD, btn_MantTipoPol, btn_MantDetPol, bnt_MantActF, btn_MantTEFinanc};
             cnc.deshabilitarApps(apps);
             //mante clases
-            cnc.getAccesoApp(8002, apps[0]);
+            cnc.getAccesoApp (8002,apps[0]);
             //Mantenimiento Encabezado Cuentas
             cnc.getAccesoApp(8003, apps[1]);
             //Mantenimiento tipo cuenta
@@ -35,7 +35,7 @@ namespace Capa_VistaContabilidad
             // Mantenimiento Activos Fijos
             cnc.getAccesoApp(8008, apps[6]);
             // Mantenimiento Estados Financieros
-
+            
             // ----------- Procesos ---------
 
             cnc.getAccesoApp(8030, apps[7]);
@@ -204,11 +204,11 @@ namespace Capa_VistaContabilidad
 
         private void btnProveedores_Click(object sender, EventArgs e)
         {
-            //Presupuesto presp = new Presupuesto();
-            //presp.MdiParent = this;
-            //presp.StartPosition = FormStartPosition.CenterScreen;
-            //presp.Show();
-            //hideSubMenu();
+            Presupuesto presp = new Presupuesto();
+            presp.MdiParent = this;
+            presp.StartPosition = FormStartPosition.CenterScreen;
+            presp.Show();
+            hideSubMenu();
         }
 
         private void btnContactosProveedores_Click(object sender, EventArgs e)
@@ -260,7 +260,7 @@ namespace Capa_VistaContabilidad
 
         private void btnFactura_Click(object sender, EventArgs e)
         {
-            MantinimientoEstadosFinancieros efinancieros = new MantinimientoEstadosFinancieros();
+            EstadosFinancieros efinancieros = new EstadosFinancieros();
             efinancieros.MdiParent = this;
             efinancieros.StartPosition = FormStartPosition.CenterScreen;
             efinancieros.Show();
@@ -428,13 +428,12 @@ namespace Capa_VistaContabilidad
             hideSubMenu();
         }
 
-        private void button2_Click_3(object sender, EventArgs e)
+        private void btn_ConsultaInt_Click(object sender, EventArgs e)
         {
-            MantenimientoActivos mantclas = new MantenimientoActivos();
-
-            mantclas.MdiParent = this;
-            mantclas.StartPosition = FormStartPosition.CenterScreen;
-            mantclas.Show();
+            Capa_VistaConsultas.Busqueda consultar = new Capa_VistaConsultas.Busqueda();
+            consultar.MdiParent = this;
+            consultar.StartPosition = FormStartPosition.CenterScreen;
+            consultar.Show();
             hideSubMenu();
         }
     }

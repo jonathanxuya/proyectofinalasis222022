@@ -31,7 +31,7 @@ namespace Capa_VistaContabilidad
         {
             NavegadorVista.Navegador.idApp = "8002";
             TextBox[] Grupotextbox = { textIDEncabezado, textNombreEncabezado, textStatusEncabezado};
-            TextBox[] Idtextbox = { textIDEncabezado};
+            TextBox[] Idtextbox = { textIDEncabezado };
             navegador1.textbox = Grupotextbox;
             navegador1.tabla = dgvClaseCuentaEncabezado;
             navegador1.textboxi = Idtextbox;
