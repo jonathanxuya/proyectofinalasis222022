@@ -10,64 +10,40 @@ using System.Windows.Forms;
 
 namespace Capa_VistaContabilidad
 {
-    public partial class EstadosFinancieros: Form
+    public partial class ActivosFijos : Form
     {
-        public EstadosFinancieros()
+        public ActivosFijos()
         {
             InitializeComponent();
         }
+
+
         Capa_ControladorContabilidad.controlador crud = new Capa_ControladorContabilidad.controlador();
+
         private void button1_Click(object sender, EventArgs e)
         {
-            float _Pk, _Edi, _Mue, _Equi, _Maqui, _Herra, _Eqco;
-
-
-            _Pk = float.Parse(textBox7.Text);
-            _Edi = float.Parse(textBox1.Text);
-            _Mue = float.Parse(textBox2.Text);
-            _Equi = float.Parse(textBox3.Text);
-            _Maqui = float.Parse(textBox6.Text);
-            _Herra = float.Parse(textBox5.Text);
-            _Eqco = float.Parse(textBox4.Text);
-
-            bool resultado = crud.InsertEF(_Pk, _Edi, _Mue, _Equi, _Maqui, _Herra, _Eqco);
+            bool resultado = crud.InsertProducto(textBox7.Text, textBox1.Text, textBox2.Text, textBox3.Text, textBox6.Text, textBox5.Text, textBox4.Text);
             if (resultado)
             {
-                MessageBox.Show("Dartos ingresados");
+                dataGridView1.Rows.Add(new object[] { textBox7.Text, textBox1.Text, textBox2.Text, textBox3.Text, textBox6.Text, textBox5.Text, textBox4.Text });
             }
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            float _Pk, _Edi, _Mue, _Equi, _Maqui, _Herra, _Eqco;
-
-
-            _Pk = float.Parse(textBox7.Text);
-            _Edi = float.Parse(textBox1.Text);
-            _Mue = float.Parse(textBox2.Text);
-            _Equi = float.Parse(textBox3.Text);
-            _Maqui = float.Parse(textBox6.Text);
-            _Herra = float.Parse(textBox5.Text);
-            _Eqco = float.Parse(textBox4.Text);
-
-            bool resultado = crud.UpdateEF(_Pk, _Edi, _Mue, _Equi, _Maqui, _Herra, _Eqco);
+            bool resultado = crud.UpdateProducto(textBox7.Text, textBox1.Text, textBox2.Text, textBox3.Text, textBox6.Text, textBox5.Text, textBox4.Text);
             if (resultado)
             {
-                MessageBox.Show("Dartos ingresados");
+                dataGridView1.Rows.Add(new object[] { textBox7.Text, textBox1.Text, textBox2.Text, textBox3.Text, textBox6.Text, textBox5.Text, textBox4.Text });
             }
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            float _Pk;
-
-
-            _Pk = float.Parse(textBox7.Text);
-
-            bool resultado = crud.DeleteEF(_Pk);
+            bool resultado = crud.DeleteProducto(textBox7.Text);
             if (resultado)
             {
-                MessageBox.Show("Dartos ingresados");
+                dataGridView1.Rows.Add(new object[] { textBox7.Text });
             }
         }
 
@@ -124,7 +100,7 @@ namespace Capa_VistaContabilidad
                 }
                 else
                 {
-                    data = textBox7.Text;
+                    data = textBox1.Text;
                     col = "Edificaciones";
                 }
             }
@@ -141,7 +117,8 @@ namespace Capa_VistaContabilidad
 
         private void button5_Click(object sender, EventArgs e)
         {
-            
+
+            textBox1.Clear();
             textBox2.Clear();
             textBox3.Clear();
             textBox4.Clear();
@@ -154,10 +131,23 @@ namespace Capa_VistaContabilidad
         {
             String table = "";
             DataTable dt = new DataTable();
-            table = "tbl_EstadosFinancieros";
-            crud.ActualizarEF(table, dt);
+            table = "tbl_activosfijos";
+            crud.ActualizarT(table, dt);
             dataGridView1.DataSource = dt;
         }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void ActivosFijos_Load(object sender, EventArgs e)
+        {
+            DataTable dt = crud.SelectProducto();
+            foreach (DataRow item in dt.Rows)
+            {
+                dataGridView1.Rows.Add(new object[] { item[0].ToString(), item[1].ToString(), item[2].ToString(), item[3].ToString(), item[4].ToString(), item[5].ToString(), item[6].ToString() });
+            }
+        }
     }
-    
 }

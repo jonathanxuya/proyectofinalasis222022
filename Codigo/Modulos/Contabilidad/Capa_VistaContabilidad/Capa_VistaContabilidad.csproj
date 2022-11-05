@@ -101,6 +101,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ActivosFijos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ActivosFijos.Designer.cs">
+      <DependentUpon>ActivosFijos.cs</DependentUpon>
+    </Compile>
     <Compile Include="Cierre General.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -188,6 +194,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="ActivosFijos.resx">
+      <DependentUpon>ActivosFijos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Cierre General.resx">
       <DependentUpon>Cierre General.cs</DependentUpon>
     </EmbeddedResource>
