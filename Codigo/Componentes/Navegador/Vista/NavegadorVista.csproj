@@ -33,7 +33,7 @@
   <ItemGroup>
     <Reference Include="Capa_VistaConsultas, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\..\Consultas2\proyectofinalasis222022\Codigo\Componentes\Consultas\Capa_Vista\bin\Debug\Capa_VistaConsultas.dll</HintPath>
+      <HintPath>..\..\Consultas\Capa_Vista\bin\Debug\Capa_VistaConsultas.dll</HintPath>
     </Reference>
     <Reference Include="FontAwesome.Sharp, Version=6.1.1.0, Culture=neutral, PublicKeyToken=d16d1e4e568ec10f, processorArchitecture=MSIL">
       <HintPath>..\packages\FontAwesome.Sharp.6.1.1\lib\net472\FontAwesome.Sharp.dll</HintPath>
@@ -43,8 +43,7 @@
     </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
-    <Reference Include="Seguridad_Controlador, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
+    <Reference Include="Seguridad_Controlador">
       <HintPath>..\..\Seguridad\Colchoneria\Capa_controlador\bin\Debug\Seguridad_Controlador.dll</HintPath>
     </Reference>
     <Reference Include="System" />

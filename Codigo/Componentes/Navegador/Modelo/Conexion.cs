@@ -14,9 +14,7 @@ namespace NavegadorModelo
         public OdbcConnection conexion()
         {
             //creacion de la conexion via ODBC
-
-            OdbcConnection conn = new OdbcConnection("Dsn=colchoneria");
-
+            OdbcConnection conn = new OdbcConnection("Dsn=Colchoneria");
             try
             {
                 conn.Open();

@@ -35,11 +35,17 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\..\Modulos\Nominas\MDI_Nominas\CapaVistaNomina\bin\Debug\CapaVistaNomina.dll</HintPath>
     </Reference>
+    <Reference Include="CapaVistaProduccion">
+      <HintPath>..\..\..\..\Modulos\Produccion\CapaVista\bin\Debug\CapaVistaProduccion.dll</HintPath>
+    </Reference>
+    <Reference Include="Capa_VistaContabilidad">
+      <HintPath>..\..\..\..\Modulos\Contabilidad\Capa_VistaContabilidad\bin\Debug\Capa_VistaContabilidad.dll</HintPath>
+    </Reference>
+    <Reference Include="ComprasVista">
+      <HintPath>..\..\..\..\Modulos\Administracion\Vista\bin\Debug\ComprasVista.dll</HintPath>
+    </Reference>
     <Reference Include="eCryptography, Version=1.0.0.1, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Eramake.eCryptography.1.1.6\lib\net45\eCryptography.dll</HintPath>
-    </Reference>
-    <Reference Include="Modelo">
-      <HintPath>..\Capa_controlador\bin\Debug\Modelo.dll</HintPath>
     </Reference>
     <Reference Include="Seguridad_Controlador">
       <HintPath>..\Capa_controlador\bin\Debug\Seguridad_Controlador.dll</HintPath>
@@ -56,6 +62,9 @@
     <Reference Include="System.Xml" />
     <Reference Include="VistaLogistica">
       <HintPath>..\..\..\..\Modulos\Logistica\VistaLogistica\bin\Debug\VistaLogistica.dll</HintPath>
+    </Reference>
+    <Reference Include="Vista_Bancos">
+      <HintPath>..\..\..\..\Modulos\Bancos\Vista_Bancos\bin\Debug\Vista_Bancos.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>

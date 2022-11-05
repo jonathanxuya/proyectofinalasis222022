@@ -192,6 +192,10 @@ namespace NavegadorControlador
                     {
                         ((CheckBox)txt).Enabled = true;
                     }
+                    else if (txt is DateTimePicker)
+                    {
+                        ((DateTimePicker)txt).Enabled = true;
+                    }
                 }
             }
             
@@ -220,6 +224,10 @@ namespace NavegadorControlador
                     else if (txt is CheckBox)
                     {
                         ((CheckBox)txt).Enabled = false;
+                    }
+                    else if (txt is DateTimePicker)
+                    {
+                        ((DateTimePicker)txt).Enabled = false;
                     }
                 }
             }
@@ -300,7 +308,7 @@ namespace NavegadorControlador
         }
 
       
-        public void delete(TextBox[] textbox, DataGridView tabla, IconButton[] botones, string idApp)
+        public void delete(TextBox[] textbox, DataGridView tabla, IconButton[] botones, string idApp, Control control)
         {
             try
             {
@@ -314,12 +322,13 @@ namespace NavegadorControlador
                     cnseg.setBtitacora(idApp, "Eliminar");
                     MessageBox.Show("Dato Eliminado");
                     bloquearbotonesGC(botones, true);
-                    for (int x = 0; x < textbox.Length; x++)
+                    desactivar(control);
+                    /*for (int x = 0; x < textbox.Length; x++)
                     {
                         textbox[x].Enabled = false;
 
 
-                    }
+                    }*/
                 }
                 
             }
@@ -331,7 +340,7 @@ namespace NavegadorControlador
             
                
         }
-        public void ingresar(TextBox[] textbox, DataGridView tabla, IconButton[] botones, String idApp)//Crea cadenas de datos para la insercion
+        public void ingresar(TextBox[] textbox, DataGridView tabla, IconButton[] botones, String idApp, Control control)//Crea cadenas de datos para la insercion
         {   
             try
             {   
@@ -365,10 +374,11 @@ namespace NavegadorControlador
                     cnseg.setBtitacora(idApp, "Guardar");
                     MessageBox.Show("Dato Insertado");
                     bloquearbotonesGC(botones, true);
-                    for (int x = 0; x < textbox.Length; x++)
+                    desactivar(control);
+                    /*for (int x = 0; x < textbox.Length; x++)
                     {
                         textbox[x].Enabled = false;
-                    }
+                    }*/
 
                 }
                 else if (autorizazcion == "no")
@@ -420,7 +430,7 @@ namespace NavegadorControlador
             
         }
 
-        public void actualizar(TextBox[] textbox, DataGridView tabla, IconButton[] botones, string idApp)//Crea cadenas de datos para la actualizacion
+        public void actualizar(TextBox[] textbox, DataGridView tabla, IconButton[] botones, string idApp, Control control)//Crea cadenas de datos para la actualizacion
         {
             try
             {
@@ -467,10 +477,11 @@ namespace NavegadorControlador
                         cnseg.setBtitacora(idApp, "Modificar");
                         MessageBox.Show("Dato actualizado");
                         bloquearbotonesGC(botones, true);
-                        for (int x = 0; x < textbox.Length; x++)
+                        desactivar(control);
+                        /*for (int x = 0; x < textbox.Length; x++)
                         {
                             textbox[x].Enabled = false;
-                        }
+                        }*/
                     }
 
                 
@@ -577,7 +588,7 @@ namespace NavegadorControlador
             }
             catch (Exception e)
             {
-                MessageBox.Show("Error: " + e);
+               
             }
 
             
@@ -705,6 +716,32 @@ namespace NavegadorControlador
                 MessageBox.Show("Error: " + e);
             }
         }*/
+
+        public void reporte(string id1)
+        {
+            
+                string ubicacion1 = "";
+                string estado1 = "";
+                estado1 = sn.reporteestado(id1);
+                ubicacion1 = sn.reporteestado1(id1);
+            if (estado1 == "Visible")
+            {
+               CapaVistaReporteria.visualizar b = new CapaVistaReporteria.visualizar(ubicacion1);
+                b.Show();
+            }
+            else if(ubicacion1=="") {
+                MessageBox.Show("No se encuentra guardado el reporte de la aplicación =  " + id1);
+            }
+            else
+            {
+                MessageBox.Show("No esta habilitado el reporte");
+            }
+                               
+                
+               
+            
+           
+        }
 
      }
 }

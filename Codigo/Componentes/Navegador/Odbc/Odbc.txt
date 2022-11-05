@@ -1,5 +1,0 @@
-colchoneria
-colchoneria.mysql.database.azure.com	3306
-administrador
-password: Jm123456
-bd_logistica

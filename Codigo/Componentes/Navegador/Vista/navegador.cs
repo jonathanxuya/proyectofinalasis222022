@@ -29,7 +29,7 @@ namespace NavegadorVista
         public TextBox[] textboxi = { };
         public DataGridView tabla;
         public static string idApp;
-        /* Consultas Boton descomentar Linea 297 
+
         public void consulta()
         {
             string tablan2 = tabla.Tag.ToString();
@@ -44,7 +44,7 @@ namespace NavegadorVista
             
             
         }
-        */
+        
 
 
 
@@ -223,7 +223,7 @@ namespace NavegadorVista
            
             if (opcion == 1)
             {
-                cn.ingresar(textbox, tabla, botongc, idApp);
+                cn.ingresar(textbox, tabla, botongc, idApp, actual);
                 IconButton[] botongc2 = {btnInsert, btnModificar, btnDelete, btnUpdate, btnConsultar, btnReporte, btnNext,
                 btnBack,btnStart,btnEnd
                 };
@@ -233,7 +233,7 @@ namespace NavegadorVista
             }
             else if (opcion == 2)
             {
-                cn.actualizar(textbox, tabla, botongc, idApp);
+                cn.actualizar(textbox, tabla, botongc, idApp, actual);
                 IconButton[] botongc2 = {btnInsert, btnModificar, btnDelete, btnUpdate, btnConsultar, btnReporte, btnNext,
                 btnBack,btnStart,btnEnd
                 };
@@ -246,7 +246,7 @@ namespace NavegadorVista
                 if(resultado == DialogResult.Yes)
                 {
                     
-                    cn.delete(textbox, tabla, botongc, idApp);
+                    cn.delete(textbox, tabla, botongc, idApp, actual);
                     IconButton[] botongc2 = {btnInsert, btnModificar, btnDelete, btnUpdate, btnConsultar, btnReporte, btnNext,
                     btnBack,btnStart,btnEnd
                     };
@@ -295,7 +295,7 @@ namespace NavegadorVista
 
         private void btnConsultar_Click(object sender, EventArgs e)
         {
-            //consulta();
+            consulta();
             cnseg.setBtitacora(idApp, "Consulta");
             
 
@@ -305,13 +305,21 @@ namespace NavegadorVista
 
         private void btnReporte_Click(object sender, EventArgs e)
         {
-            //cnseg.setBtitacora(idApp, "Reportes");
-            //CapaVista.Consulta rp = new CapaVista.Consulta();
-            //rp.Show();
+            cnseg.setBtitacora(idApp, "Reportes");
+            Report();
+            /*CapaVista.Consulta rp = new CapaVista.Consulta();
+            rp.Show();*/
             //Reportes.Vista cr = new Reportes.Vista();
             /*
              * Form 'fcr' = new 'cr.BusquedaAvanzada';
              */
+        }
+
+        public void Report()
+        {
+            
+            cn.reporte(idApp);
+
         }
     }
 }

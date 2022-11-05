@@ -29,6 +29,36 @@ namespace CapaVistaReporteria
             {
                 textBox1.Text = v1.FileName;
 
+                string[] separatingStrings = { "\\" };
+
+                string text = textBox1.Text;
+                
+
+                string[] words = text.Split(separatingStrings, System.StringSplitOptions.RemoveEmptyEntries);
+                string db = "";
+                Boolean ruta = false;
+
+                for (int i = 0; i < words.Length; i++)
+                {
+
+                    if (ruta)
+                    {
+                        if (i < words.Length - 1)
+                        {
+                            db += words[i] + '\\';
+                        }
+                        else
+                        {
+                            db += words[i];
+                        }
+                    }
+                    if (words[i].Equals("Reportes"))
+                    {
+                        ruta = true;
+                    }
+                }
+                textBox1.Text = db;
+
             }
         }
 
