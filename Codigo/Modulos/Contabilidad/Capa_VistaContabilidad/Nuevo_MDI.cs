@@ -388,7 +388,7 @@ namespace Capa_VistaContabilidad
 
         private void bnt_MantAct_Click(object sender, EventArgs e)
         {
-            MantenimientoActivos mantAct = new MantenimientoActivos();
+            ActivosFijos mantAct = new ActivosFijos();
             mantAct.MdiParent = this;
             mantAct.StartPosition = FormStartPosition.CenterScreen;
             mantAct.Show();

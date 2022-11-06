@@ -158,6 +158,11 @@ namespace Capa_VistaContabilidad
             crud.ActualizarEF(table, dt);
             dataGridView1.DataSource = dt;
         }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
     
 }

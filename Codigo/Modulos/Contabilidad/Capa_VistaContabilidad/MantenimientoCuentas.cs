@@ -2,6 +2,7 @@
  9959-19-1471
 Mantenimiento Cuentas*/
 
+using Capa_ControladorContabilidad;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;

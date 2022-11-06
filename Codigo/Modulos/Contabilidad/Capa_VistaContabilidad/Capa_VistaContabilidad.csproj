@@ -143,12 +143,6 @@
     <Compile Include="GeneracionPoliza.designer.cs">
       <DependentUpon>GeneracionPoliza.cs</DependentUpon>
     </Compile>
-    <Compile Include="MantenimientoActivos.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="MantenimientoActivos.designer.cs">
-      <DependentUpon>MantenimientoActivos.cs</DependentUpon>
-    </Compile>
     <Compile Include="MantenimientoEncabezadoCuentas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -214,9 +208,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GeneracionPoliza.resx">
       <DependentUpon>GeneracionPoliza.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="MantenimientoActivos.resx">
-      <DependentUpon>MantenimientoActivos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MantenimientoEncabezadoCuentas.resx">
       <DependentUpon>MantenimientoEncabezadoCuentas.cs</DependentUpon>
